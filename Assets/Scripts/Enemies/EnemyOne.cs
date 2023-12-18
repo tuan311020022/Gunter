@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyOne : MonoBehaviour
+public class EnemyOne : EnemyController
 {
     // Huong di va thoi gian chuyen huong
     int direction = 1;
     float timer, changeTime = 2f;
 
-    public float speed = 3f;
     bool isFacingLeft;
 
     private bool isDead = false;
@@ -70,11 +69,15 @@ public class EnemyOne : MonoBehaviour
         }
     }
 
+    void DestroyObject()
+    {
+        Destroy(gameObject);
+    }
     void Attack()
     {
-        if(!isDead)
-        {
-            anim.SetTrigger("Attack");
-        }
+        // if(!isDead)
+        // {
+        //     anim.SetTrigger("Attack");
+        // }
     }
 }
