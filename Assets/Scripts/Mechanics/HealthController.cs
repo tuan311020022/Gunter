@@ -18,33 +18,5 @@ public class HealthController : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-        if(currentHealth <= 0)
-        {
-            anim.SetTrigger("Dead");
-        }
-        else{
-            StartCoroutine(DamageColorCoroutine());
-        }
-    }
 
-    void GainHealth(int health)
-    {
-        if(currentHealth < maxHealth)
-        {
-            currentHealth += health;
-        }
-        else{
-            currentHealth = maxHealth;
-        }
-    }
-
-    IEnumerator DamageColorCoroutine()
-    {
-        spriteRenderer.color = Color.red;
-        yield return new WaitForSeconds(0.2f);
-        spriteRenderer.color = Color.white;
-    }
 }

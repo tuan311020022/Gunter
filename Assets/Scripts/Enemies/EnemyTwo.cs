@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyTwo : EnemyController
+public class EnemyTwo : MonoBehaviour
 {
-    private bool isDead = false;
-    Animator anim;
+    public GameObject grenadePrefab;
+
+    Animator animator;
 
     Rigidbody2D enemyRB;
 
@@ -15,7 +16,7 @@ public class EnemyTwo : EnemyController
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         enemyRB = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
@@ -27,17 +28,8 @@ public class EnemyTwo : EnemyController
 
     }
 
-    void Dead(int health)
+    void throwGrenade()
     {
-        if(health <= 0)
-        {
-            isDead = true;
-            anim.SetTrigger("Dead");
-        }
-    }
-
-    void DestroyObject()
-    {
-        Destroy(gameObject);
+      //  Instantiate(grenadePrefab, .transform.position, Quaternion.identity);
     }
 }

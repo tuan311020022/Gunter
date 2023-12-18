@@ -8,43 +8,67 @@ public class EnemyController : MonoBehaviour
     public float speed;
     public int damage;
 
-    public int health;
+    public int maxHealth;
 
-    // Distance
-    public float attackDistance;
+    protected float currentHealth;
 
-    public float viewDistance;
-
-    protected bool facingRight = false;
-
-    protected Transform target;
-    protected float targetDistance;
-
-    protected Rigidbody2D rb2d;
-    protected SpriteRenderer sprite;
-
+    protected bool facingRight;
+    private bool isDead;
+        
     // Ground check
     public Transform groundCheck;
     public float groundCheckRadius = 0.1f;
     public LayerMask groundLayer;
 
+    protected Transform target;
+
+    protected GameObject targetGO;
+
+    protected SpriteRenderer sprite;
+
     Animator anim;
-    // Update is called once per frame
+
+    Rigidbody2D rb2D;
 
     void Start() {
+        currentHealth = maxHealth;
+
         anim = GetComponent<Animator>();
+        rb2D = GetComponent<Rigidbody2D>();
+        
         target = FindObjectOfType<PlayerController>().transform;
-        rb2d = GetComponent<Rigidbody2D>();
+        targetGO = GameObject.FindGameObjectWithTag("Player");
         sprite = GetComponent<SpriteRenderer>();
     }
     void Update()
     {
-        transform.Translate(speed * Time.deltaTime * transform.right);
-
         if(!Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer))
         {
             Flip();
         }
+
+        transform.Translate(speed * Time.deltaTime * transform.right);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        if(currentHealth <= 0)
+        {
+            anim.SetTrigger("Die");
+            speed = 0;        
+            Destroy(gameObject, 0.9f);
+        }
+        else{
+            StartCoroutine(DamageColorCoroutine());
+        }
+    }
+
+    IEnumerator DamageColorCoroutine()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        sprite.color = Color.white;
     }
 
     private void Flip()
@@ -57,5 +81,12 @@ public class EnemyController : MonoBehaviour
 
         speed *= -1;
         anim.SetFloat("Speed", 1);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.CompareTag("Obstacle"))
+        {
+            Flip();
+        }
     }
 }
