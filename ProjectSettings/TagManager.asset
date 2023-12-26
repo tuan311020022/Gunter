@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Obstacle
-  - Projectiles
+  - Bullet
+  - Barrel
   layers:
   - Default
   - TransparentFX

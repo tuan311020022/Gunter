@@ -6,9 +6,13 @@ public class GrenadeScript : MonoBehaviour
 {
     public float throwForce;
 
-    public float Delay = 2f;
+    public float Delay;
+
+    public Transform playerCheck;
     public float grenadeRadius;
-    public float damage;
+    public LayerMask playerLayer;
+
+    public int damage;
 
     private float countDown;
     private bool isExplode;
@@ -24,12 +28,15 @@ public class GrenadeScript : MonoBehaviour
         countDown = Delay;
         anim = GetComponent<Animator>();  
         rb2D = GetComponent<Rigidbody2D>();
-        rb2D.AddForce(Vector3.right * throwForce, ForceMode2D.Impulse);
+        rb2D.AddForce(Vector3.right * throwForce, ForceMode2D.Force);
+
+
     }
 
     void Update()
     {
         countDown -= Time.deltaTime;
+
         if(countDown <= 0 && !isExplode)
         {
             Explode();
@@ -40,8 +47,23 @@ public class GrenadeScript : MonoBehaviour
     private void Explode()
     {
         Instantiate(ExplosionEffect, transform.position, transform.rotation);
+
+        Collider2D[] Around = Physics2D.OverlapCircleAll(playerCheck.position, grenadeRadius, playerLayer);
+        
+        foreach(Collider2D inside in Around)
+        {
+            if(inside.transform.tag == "Player")
+            {
+                PlayerController ps = GetComponent<PlayerController>();
+                ps.TakeDamage(10);
+            }
+        }
+
         Destroy(gameObject);
     }
 
-
+    private void OnDrawGizmosSelected() {
+      Gizmos.color = Color.red;
+      Gizmos.DrawWireSphere(playerCheck.position, grenadeRadius);
+    }
 }

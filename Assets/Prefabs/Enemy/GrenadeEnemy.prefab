@@ -265,14 +265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cabcb44383cbb4499e598faf12cb379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
   damage: 0
   maxHealth: 50
-  groundCheck: {fileID: 1002927308}
-  groundCheckRadius: 0.1
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &4999691467647615701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,10 +279,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c1c4b87ac49e74f9869b98ba73e527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
+  throwGrenadeRate: 2
   grenadePrefab: {fileID: 3657242293003458877, guid: e4a341c240634ea4894990b12179556b, type: 3}
   grenadePosition: {fileID: 1599546020}
   target: {fileID: 0}
-  throwGrenadeRate: 2
   playerCheck: {fileID: 1081127232}
   playerCheckRadius: 6.15
   playerLayer:
