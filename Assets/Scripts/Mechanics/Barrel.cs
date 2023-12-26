@@ -6,25 +6,13 @@ public class Barrel : MonoBehaviour
 {
     public GameObject[] gameObjects;
 
-    // int randomObjects = Random.RandomRange()
-    Animator anim;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.CompareTag("Projectiles"))
+        int randomIndex = Random.Range(0, gameObjects.Length);
+        
+        if(other.gameObject.CompareTag("Bullet"))
         {
-            anim.SetTrigger("Break");
-            Instantiate(gameObjects[0], Vector2.zero, Quaternion.identity);
+            Instantiate(gameObjects[randomIndex], transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 }
