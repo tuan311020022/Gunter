@@ -4,27 +4,13 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    // Stats
-    public float speed;
     public int damage;
 
     public int maxHealth;
 
-    protected float currentHealth;
+    private float currentHealth;
 
-    protected bool facingRight;
-    private bool isDead;
-        
-    // Ground check
-    public Transform groundCheck;
-    public float groundCheckRadius = 0.1f;
-    public LayerMask groundLayer;
-
-    protected Transform target;
-
-    protected GameObject targetGO;
-
-    protected SpriteRenderer sprite;
+    SpriteRenderer sprite;
 
     Animator anim;
 
@@ -35,19 +21,14 @@ public class EnemyController : MonoBehaviour
 
         anim = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
-        
-        target = FindObjectOfType<PlayerController>().transform;
-        targetGO = GameObject.FindGameObjectWithTag("Player");
+        // target = FindObjectOfType<PlayerController>().transform;
         sprite = GetComponent<SpriteRenderer>();
     }
     void Update()
     {
-        if(!Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer))
-        {
-            Flip();
-        }
 
-        transform.Translate(speed * Time.deltaTime * transform.right);
+
+        //transform.Translate(speed * Time.deltaTime * transform.right);
     }
 
     public void TakeDamage(int damage)
@@ -56,7 +37,6 @@ public class EnemyController : MonoBehaviour
         if(currentHealth <= 0)
         {
             anim.SetTrigger("Die");
-            speed = 0;        
             Destroy(gameObject, 0.9f);
         }
         else{
@@ -71,22 +51,6 @@ public class EnemyController : MonoBehaviour
         sprite.color = Color.white;
     }
 
-    private void Flip()
-    {
-        facingRight = !facingRight;
 
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
 
-        speed *= -1;
-        anim.SetFloat("Speed", 1);
-    }
-
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.CompareTag("Obstacle"))
-        {
-            Flip();
-        }
-    }
 }

@@ -51,5 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Gunter.sln"
+    "dotnet.defaultSolution": "Gunter.sln",
+    "dotnet.preferCSharpExtension": true
 }

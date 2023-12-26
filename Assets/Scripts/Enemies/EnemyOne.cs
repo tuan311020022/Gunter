@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class EnemyOne : MonoBehaviour
 {
-    // Huong di va thoi gian chuyen huong
-    int direction = 1;
-    float timer, changeTime = 2f;
-    bool isFacingLeft;
+    public float speed;
+    bool facingRight;
+    bool isDead;
+
+    // Ground check
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.1f;
+    public LayerMask groundLayer;
+
 
     Animator animator;
 
@@ -23,39 +28,37 @@ public class EnemyOne : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
 
-        timer = changeTime;
+        // timer = changeTime;
     }
 
     // Update is called once per frame
+  
     void Update()
     {
-        //Move();
-        //Attack();
+        if(!Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer))
+        {
+            Flip();
+        }
+        transform.Translate(speed * Time.deltaTime * transform.right);
     }
 
-    void Move()
+    public void Flip()
     {
-        // timer -= Time.deltaTime;
-        // if(timer < 0)
-        // {
-        //     direction = -direction;
-        //     timer = changeTime;
-        // }
+        facingRight = !facingRight;
 
-        // Vector2 pos = transform.position;
-        // if (isFacingLeft)
-        // {
-        //     animator.SetFloat("Speed", 1);
-        //     pos.x += speed * Time.deltaTime * direction;
-        // }
-        // else
-        // {
-        //     animator.SetFloat("Speed", 1);
-        //     pos.x += speed * Time.deltaTime * direction;
-        //     spriteRenderer.flipX = direction > 0;
-        // }
-        // enemyRB.MovePosition(pos);
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
 
+        speed *= -1;
+        animator.SetFloat("Speed", 1);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.CompareTag("Obstacle"))
+        {
+            Flip();
+        }
     }
 
 
