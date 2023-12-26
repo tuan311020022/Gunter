@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4519888882554128666}
   - component: {fileID: 3280030172067131933}
-  - component: {fileID: -2882740538501874471}
   - component: {fileID: 7662900975799045518}
+  - component: {fileID: -2882740538501874471}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3e5640289de939c4e9d8af6ab91f7645, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -86,20 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-2882740538501874471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5064542398199573782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3b83e37679d59a44a3747de35899e5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  destroyTime: 1.5
 --- !u!61 &7662900975799045518
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -126,3 +112,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23, y: 0.09}
   m_EdgeRadius: 0
+--- !u!114 &-2882740538501874471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5064542398199573782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b83e37679d59a44a3747de35899e5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  speed: 5
+  destroyTime: 2

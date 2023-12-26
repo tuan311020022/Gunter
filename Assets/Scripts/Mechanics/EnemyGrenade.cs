@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrenadeScript : MonoBehaviour
+public class EnemyGrenade : MonoBehaviour
 {
     public float throwForce;
 

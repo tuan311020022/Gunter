@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
+    public int damage;
     public float speed;
 
     public float destroyTime;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         Destroy(gameObject, destroyTime);
@@ -25,7 +19,7 @@ public class BulletScript : MonoBehaviour
         if(other.gameObject.CompareTag("Enemy"))
         {
             EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
-            enemy.TakeDamage(10);
+            enemy.TakeDamage(damage);
             Destroy(gameObject);
         }
 

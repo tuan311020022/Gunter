@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public int damage;
-
     public int maxHealth;
 
-    private float currentHealth;
+    public float currentHealth;
 
     SpriteRenderer sprite;
 
@@ -21,14 +19,11 @@ public class EnemyController : MonoBehaviour
 
         anim = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
-        // target = FindObjectOfType<PlayerController>().transform;
         sprite = GetComponent<SpriteRenderer>();
     }
     void Update()
     {
 
-
-        //transform.Translate(speed * Time.deltaTime * transform.right);
     }
 
     public void TakeDamage(int damage)
@@ -36,14 +31,19 @@ public class EnemyController : MonoBehaviour
         currentHealth -= damage;
         if(currentHealth <= 0)
         {
-            anim.SetTrigger("Die");
-            Destroy(gameObject, 0.9f);
+            Dead();
         }
         else{
             StartCoroutine(DamageColorCoroutine());
         }
     }
 
+    void Dead()
+    {
+        anim.SetTrigger("Die");
+        
+        Destroy(gameObject, 0.9f);
+    }
     IEnumerator DamageColorCoroutine()
     {
         sprite.color = Color.red;
