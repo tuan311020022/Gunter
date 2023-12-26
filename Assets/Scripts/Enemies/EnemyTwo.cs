@@ -72,7 +72,7 @@ public class EnemyTwo : MonoBehaviour
         animator.SetTrigger("Attack");
         nextThrow = Time.time + throwGrenadeRate;
         GameObject grenade = Instantiate(grenadePrefab, grenadePosition.transform.position, transform.rotation);
-        grenade.transform.eulerAngles = new Vector3(0, 0, 90f);
+        //grenade.transform.eulerAngles = new Vector3(0, 0, 90f);
         
       }
     }

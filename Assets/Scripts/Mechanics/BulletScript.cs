@@ -29,9 +29,5 @@ public class BulletScript : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(other.gameObject.CompareTag("Barrel"))
-        {
-            Destroy(other.gameObject);
-        }
     }
 }

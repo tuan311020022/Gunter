@@ -30,4 +30,13 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void GetHealth(int health)
+    {
+        currentHealth += health;
+        if(currentHealth >= maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
 }
