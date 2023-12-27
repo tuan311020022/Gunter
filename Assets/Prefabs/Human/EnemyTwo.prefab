@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 697022888}
   - component: {fileID: 4999691467647615701}
   m_Layer: 0
-  m_Name: GrenadeEnemy
+  m_Name: EnemyTwo
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

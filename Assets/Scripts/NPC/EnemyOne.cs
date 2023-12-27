@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyOne : MonoBehaviour
 {
+    public int damage;
     public float speed;
     bool facingRight;
     bool isDead;
@@ -12,6 +13,11 @@ public class EnemyOne : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius = 0.1f;
     public LayerMask groundLayer;
+
+    // Player Check
+    public Transform playerCheck;
+    public float playerCheckRadius;
+    public LayerMask playerLayer;
 
 
     Animator animator;
@@ -39,7 +45,8 @@ public class EnemyOne : MonoBehaviour
         {
             Flip();
         }
-        transform.Translate(speed * Time.deltaTime * transform.right);
+        transform.Translate(transform.right * speed * Time.deltaTime);
+        Attack();
     }
 
     public void Flip()
@@ -64,6 +71,24 @@ public class EnemyOne : MonoBehaviour
 
     void Attack()
     {
+        if(Physics2D.OverlapCircle(playerCheck.position, playerCheckRadius, playerLayer))
+        {
+            animator.SetTrigger("Attack");
+            
+            PlayerController player = gameObject.GetComponent<PlayerController>();
+            if(player != null)
+            {
+                player.TakeDamage(damage);
+            }
+        }
+        else{
+            return;
+        }
+    }
 
+
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(playerCheck.position, playerCheckRadius);
     }
 }

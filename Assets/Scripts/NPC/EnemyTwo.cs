@@ -6,7 +6,8 @@ using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class EnemyTwo : MonoBehaviour
-{
+{   
+    public int damage;
     public int speed;
 
     public float throwGrenadeRate = 2;

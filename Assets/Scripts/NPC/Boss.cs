@@ -48,7 +48,7 @@ public class Boss : MonoBehaviour
 
                 bossBullet.transform.eulerAngles = new Vector3(0, 0, 180);
                 bossBullet1.transform.eulerAngles = new Vector3(0, 0, 150);
-                bossBullet2.transform.position = new Vector3(0, 0, 150);
+                //bossBullet2.transform.position = new Vector3(0, 0, 150);
                 //ector3.Slerp(transform.position, new Vector3(50, 0,0) , 0.9f);
 
 
