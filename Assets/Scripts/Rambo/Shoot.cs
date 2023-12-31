@@ -17,7 +17,8 @@ public class Shoot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.J))
         {
-            Instantiate(Bullet, transform.position, Quaternion.identity);
+            Debug.Log("hello");
+            GameObject newBullet = Instantiate(Bullet, transform.position, transform.rotation);
         }
     }
 }
