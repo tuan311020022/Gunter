@@ -19,7 +19,6 @@ public class E1 : MonoBehaviour
     private GameObject target;
     private Animator anim;
     private float distance; // distance between player and enemy
-    private bool attackMode;
     private bool inRange; // if player in Range
     private bool cooling; // check if enemy cooling after attack
     private float intTimer;

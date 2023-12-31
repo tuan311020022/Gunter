@@ -58,7 +58,7 @@ public class EnemyOne : MonoBehaviour
         transform.localScale = scale;
 
         speed *= -1;
-        animator.SetFloat("Speed", 1);
+        animator.SetBool("Walk", true);
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
@@ -87,8 +87,8 @@ public class EnemyOne : MonoBehaviour
     }
 
 
-    private void OnDrawGizmosSelected() {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(playerCheck.position, playerCheckRadius);
-    }
+    // private void OnDrawGizmosSelected() {
+    //     Gizmos.color = Color.red;
+    //     Gizmos.DrawWireSphere(playerCheck.position, playerCheckRadius);
+    // }
 }
