@@ -5,19 +5,16 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     #region Public
-    public int damage;
     public int maxHealth;
-
-    public float currentHealth;
 
     public float moveSpeed;
     public float distance;
-    public Transform target;
+    public Transform player;
 
     #endregion
 
     #region Private
-
+    private float currentHealth;
 
     #endregion
 
@@ -42,12 +39,12 @@ public class EnemyController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
 
-        target = FindObjectOfType<PlayerController>().transform;
-        
+        //player = FindObjectOfType<PlayerController>().transform;
+        player = GameObject.FindWithTag("Player").transform;
     }
     void Update()
     {
-        targetDistance = transform.position.x - target.position.x;
+        targetDistance = transform.position.x - player.position.x;
     }
 
     private void FixedUpdate() {
@@ -64,14 +61,26 @@ public class EnemyController : MonoBehaviour
 
         Vector3 scale = transform.localScale;
 
-        if(target.transform.position.x > transform.position.x )
+        if(player.transform.position.x > transform.position.x )
         {
             scale.x = Mathf.Abs(scale.x) * -1;
-        }else if (target.transform.position.x < transform.position.x){
+        }else if (player.transform.position.x < transform.position.x){
             scale.x = Mathf.Abs(scale.x);
         }
         
         transform.localScale = scale;
+    }
+
+    protected void FlipIfNeeded(float horizontalDistance) // horizontalDistance = player.position.x - transform.position.x
+    {
+        if ((horizontalDistance > 0 && !facingRight) || (horizontalDistance < 0 && facingRight))
+        {
+            // Flip the enemy
+            facingRight = !facingRight;
+            Vector3 scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
+        }
     }
 
     public void TakeDamage(int damage)

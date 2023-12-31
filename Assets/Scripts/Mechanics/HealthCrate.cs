@@ -20,7 +20,5 @@ public class HealthCrate : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
-
     }
 }

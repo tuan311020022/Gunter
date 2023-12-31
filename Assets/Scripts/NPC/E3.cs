@@ -25,7 +25,7 @@ public class E3 : EnemyController
     void Update()
     {
         Move();
-        Flip();
+        FlipIfNeeded(player.position.x - transform.position.x);
     }
 
     void Move()
@@ -34,7 +34,7 @@ public class E3 : EnemyController
         {
             detectPlayer = true;
             anim.SetBool("Walk", true);
-            transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
         }
         else{
             detectPlayer = false;

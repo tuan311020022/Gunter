@@ -8,8 +8,8 @@ TagManager:
   - Obstacle
   - Bullet
   - Barrel
-  - FxTemporaire
   - Hit
+  - RangeEnemy
   layers:
   - Default
   - TransparentFX

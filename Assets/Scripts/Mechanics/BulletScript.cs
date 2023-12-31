@@ -15,13 +15,12 @@ public class BulletScript : MonoBehaviour
         transform.Translate(Vector2.right * speed * Time.deltaTime); 
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
+    private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Enemy"))
         {
             EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
             enemy.TakeDamage(damage);
             Destroy(gameObject);
-        }
-
+        }     
     }
 }

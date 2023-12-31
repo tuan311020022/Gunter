@@ -7,11 +7,9 @@ using UnityEngine.AI;
 public class Boss : MonoBehaviour
 {
     public float fireRate = 3;
-    private float nextFire = 0;
-
     public float fireRate1 = 20;
+    private float nextFire = 0;
     private float nextFire1 = 0;
-
 
 //
     private bool isDead = false;
@@ -31,7 +29,6 @@ public class Boss : MonoBehaviour
 
     void Update() {
         Attack();
-
     }
 
     void Attack()
