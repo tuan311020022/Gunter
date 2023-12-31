@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TestEnemy : EnemyController
 { 
     #region Public
     public float fireRate;
-    // public float detectionRadius = 10f;
-    // public float attackRange = 2f;
     public Transform firePoint;
     public GameObject bulletPrefabs;
     public float playerCheckRadius;
@@ -19,10 +18,12 @@ public class TestEnemy : EnemyController
 
     private float nextFire;
 
-    private bool isFacingRight = true;
+    private bool inRange;
+
     #endregion
     void Start()
     {
+        anim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player").transform;
     }
 
@@ -32,18 +33,40 @@ public class TestEnemy : EnemyController
         FlipIfNeeded(distanceToPlayer);
 
         Attack();
+
+
+        Vector2 directionToPlayer = (player.position - transform.position).normalized;
+        if(detectPlayer)
+        {
+            MoveEnemy();
+        }else if(!detectPlayer)
+        {
+            anim.SetBool("Walk", false);
+        }
+        // else{
+        //     MoveEnemy(currentPosition);
+        // }
     }
 
     void Attack()
     {
         if(Physics2D.OverlapCircle(transform.position, playerCheckRadius, playerLayer))
         {
+            detectPlayer = true;
             if(Time.time > nextFire)
             {
                 nextFire = Time.time + fireRate;
                 GameObject enemyBullet = Instantiate(bulletPrefabs, firePoint.position, Quaternion.identity);
             }
+        }else{
+            detectPlayer = false;
         }
+    }
+
+    void MoveEnemy()
+    {
+        anim.SetBool("Walk", true);
+        transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
     }
 
     private void OnDrawGizmos() {

@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-public class BossProjectile : MonoBehaviour
+public class RetroBullet : MonoBehaviour
 {
     public float speed;
 
     public float destroyTime;
 
     public int damage;
+
+    public float growthRate;
 
     private GameObject enemy;
 
@@ -26,6 +27,7 @@ public class BossProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.localScale += new Vector3(growthRate, growthRate, 0f) * speed * Time.deltaTime;
         transform.Translate(direction * speed * Time.deltaTime);
     }
 
@@ -41,7 +43,6 @@ public class BossProjectile : MonoBehaviour
         }
 
     }
-
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Player"))

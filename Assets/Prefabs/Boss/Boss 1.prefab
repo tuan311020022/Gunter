@@ -320,9 +320,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cabcb44383cbb4499e598faf12cb379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
   maxHealth: 100
-  currentHealth: 0
+  moveSpeed: 0
+  distance: 0
+  player: {fileID: 0}
 --- !u!1001 &5188798943047339159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -375,9 +376,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2634587728845935702, guid: a116e9663c67003439ad988eac4e196c, type: 3}
+      propertyPath: fireRate1
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2634587728845935702, guid: a116e9663c67003439ad988eac4e196c, type: 3}
+      propertyPath: playerCheckRadius
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2634587728845935702, guid: a116e9663c67003439ad988eac4e196c, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 2634587728845935702, guid: a116e9663c67003439ad988eac4e196c, type: 3}
       propertyPath: bossProjectilePrefab
       value: 
       objectReference: {fileID: 2029935089232164012, guid: 6f66fc10e4f7eaf43bc4e19709c65d0c, type: 3}
+    - target: {fileID: 2634587728845935702, guid: a116e9663c67003439ad988eac4e196c, type: 3}
+      propertyPath: bossProjectilePrefab2
+      value: 
+      objectReference: {fileID: 6148371636724051210, guid: d7f239566e9b6a24bbe1bd28dc7c3b93, type: 3}
+    - target: {fileID: 4121917973622711281, guid: a116e9663c67003439ad988eac4e196c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7722886955470578430, guid: a116e9663c67003439ad988eac4e196c, type: 3}
       propertyPath: m_Name
       value: BossWeapon

@@ -53,12 +53,6 @@ public class EnemyController : MonoBehaviour
 
     protected void Flip()
     {
-        // facingRight = !facingRight;
-
-        // Vector3 scale = transform.localScale;
-        // scale.x *= -1;
-        // transform.localScale = scale;
-
         Vector3 scale = transform.localScale;
 
         if(player.transform.position.x > transform.position.x )
