@@ -53,16 +53,24 @@ public class EnemyController : MonoBehaviour
 
     protected void Flip()
     {
-        Vector3 scale = transform.localScale;
+        // Vector3 scale = transform.localScale;
 
-        if(player.transform.position.x > transform.position.x )
-        {
-            scale.x = Mathf.Abs(scale.x) * -1;
-        }else if (player.transform.position.x < transform.position.x){
-            scale.x = Mathf.Abs(scale.x);
-        }
+        // if(player.transform.position.x > transform.position.x )
+        // {
+        //     scale.x = Mathf.Abs(scale.x) * -1;
+        // }else if (player.transform.position.x < transform.position.x){
+        //     scale.x = Mathf.Abs(scale.x);
+        // }
         
+        // transform.localScale = scale;
+        facingRight = !facingRight;
+
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
         transform.localScale = scale;
+
+        moveSpeed *= -1;
+        anim.SetBool("Walk", true);
     }
 
     protected void FlipIfNeeded(float horizontalDistance) // horizontalDistance = player.position.x - transform.position.x

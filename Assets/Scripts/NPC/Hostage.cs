@@ -5,6 +5,7 @@ using UnityEngine;
 public class Hostage : MonoBehaviour
 {
     [SerializeField] float destroyTime;
+    [SerializeField] ParticleSystem myParticle;
     private float speed = 4;
 
     bool isRelease;
@@ -12,8 +13,6 @@ public class Hostage : MonoBehaviour
 
     BoxCollider2D boxCollider;
 
-
-    
     private void Start() {
         animator = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
@@ -25,17 +24,6 @@ public class Hostage : MonoBehaviour
             Run();
         }
     }
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.CompareTag("Player"))
-        {
-            animator.SetTrigger("Release");
-            boxCollider.enabled = false;
-            isRelease = true;
-        }
-        else{
-            isRelease = false;
-        }
-    }
 
     private void Run()
     {
@@ -43,4 +31,23 @@ public class Hostage : MonoBehaviour
         transform.Translate(Vector2.left * speed * Time.deltaTime); 
         Destroy(gameObject, destroyTime);
     }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            animator.SetTrigger("Release");
+            boxCollider.enabled = false;
+            isRelease = true;
+            PlayParticle();
+        }
+        else{
+            isRelease = false;
+        }
+    }
+
+    private void PlayParticle()
+    {
+        Instantiate(myParticle, transform.position, Quaternion.identity);
+    }
+
 }
