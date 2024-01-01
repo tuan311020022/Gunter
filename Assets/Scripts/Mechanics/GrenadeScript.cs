@@ -48,16 +48,16 @@ public class GrenadeScript : MonoBehaviour
     {
         Instantiate(ExplosionEffect, transform.position, transform.rotation);
 
-        Collider2D[] Around = Physics2D.OverlapCircleAll(playerCheck.position, grenadeRadius, playerLayer);
+        // Collider2D[] Around = Physics2D.OverlapCircleAll(playerCheck.position, grenadeRadius, playerLayer);
         
-        foreach(Collider2D inside in Around)
-        {
-            if(inside.transform.tag == "Player")
-            {
-                PlayerController ps = GetComponent<PlayerController>();
-                ps.TakeDamage(10);
-            }
-        }
+        // foreach(Collider2D inside in Around)
+        // {
+        //     if(inside.transform.tag == "Player")
+        //     {
+        //         PlayerController ps = GetComponent<PlayerController>();
+        //         ps.TakeDamage(10);
+        //     }
+        // }
 
         Destroy(gameObject);
     }

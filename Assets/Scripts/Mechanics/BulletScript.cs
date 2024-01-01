@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
+    public int damage;
     public float speed;
 
     public float destroyTime;
@@ -31,9 +32,9 @@ public class BulletScript : MonoBehaviour
     }
 
     // Update is called once per frame
+
     void Update()
     {
-        // ramboMove.mySpriteRenderer.flipX =true;
         Destroy(gameObject, destroyTime);
         if (bulletRender.flipX == false)
         {
@@ -44,13 +45,12 @@ public class BulletScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
+    private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Enemy"))
         {
             EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
-            enemy.TakeDamage(10);
+            enemy.TakeDamage(damage);
             Destroy(gameObject);
-        }
-
+        }     
     }
 }

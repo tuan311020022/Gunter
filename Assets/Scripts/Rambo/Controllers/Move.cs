@@ -36,7 +36,7 @@ public class Move : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow)) 
         {
             // Vector2.up = (0,1)
-            transform.Translate(Vector2.up * 5 * Time.deltaTime);
+            transform.Translate(Vector2.up * 20 * Time.deltaTime);
         } else if (Input.GetKey(KeyCode.DownArrow)){
             // Vector2.down = (0,-1)
             transform.Translate(Vector2.down * tocDo * Time.deltaTime);
