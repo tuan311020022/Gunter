@@ -8,7 +8,6 @@ public class EnemyController : MonoBehaviour
     public int maxHealth;
 
     public float moveSpeed;
-    public float distance;
     public Transform player;
 
     #endregion
@@ -39,16 +38,11 @@ public class EnemyController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
 
-        //player = FindObjectOfType<PlayerController>().transform;
         player = GameObject.FindWithTag("Player").transform;
     }
     void Update()
     {
         targetDistance = transform.position.x - player.position.x;
-    }
-
-    private void FixedUpdate() {
-
     }
 
     protected void Flip()

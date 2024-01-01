@@ -45,9 +45,8 @@ public class TestEnemy : EnemyController
             FlipIfNeeded(distanceToPlayer);
             MoveEnemy();
         }
-        else if(!detectPlayer)
+        else
         {
-            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
             EnemyPatrol();
         }
     }
@@ -75,11 +74,12 @@ public class TestEnemy : EnemyController
 
     void EnemyPatrol()
     {
-        if(!Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer))
+        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+
+        if(!Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer) && !detectPlayer)
         {
             Flip();
         }
-
         anim.SetBool("Walk", true);
     }
     private void OnCollisionEnter2D(Collision2D other) {

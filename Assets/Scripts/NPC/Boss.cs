@@ -11,8 +11,6 @@ public class Boss : MonoBehaviour
     private float nextFire = 0;
     private float nextFire1 = 0;
 
-//
-    private bool isDead = false;
     private Animator anim;
 
     public GameObject bossProjectilePrefab;
@@ -31,7 +29,7 @@ public class Boss : MonoBehaviour
         anim = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
 
-        player = GameObject.FindWithTag("Player").transform;
+        //player = GameObject.FindWithTag("Player").transform;
     }
 
     void Update() {
@@ -41,7 +39,7 @@ public class Boss : MonoBehaviour
 
     void Attack()
     {
-        if(!isDead && Physics2D.OverlapCircle(transform.position, playerCheckRadius, playerLayer))
+        if(Physics2D.OverlapCircle(transform.position, playerCheckRadius, playerLayer))
         {
             if(Time.time > nextFire ) 
             {
@@ -51,14 +49,12 @@ public class Boss : MonoBehaviour
                 GameObject bossBullet1 = Instantiate(bossProjectilePrefab, bossWeapon.position, bossWeapon.rotation);
                 GameObject bossBullet2 = Instantiate(bossProjectilePrefab, bossWeapon.position, bossWeapon.rotation);
 
-                bossBullet.transform.eulerAngles = new Vector3(0, 0, 90);
-                bossBullet.transform.position = Vector2.MoveTowards(transform.position, player.position, 5 * Time.deltaTime);
+                bossBullet.transform.eulerAngles = new Vector3(0, 0, 90f);
 
-                bossBullet1.transform.eulerAngles = new Vector3(0, 0, 150);
-                bossBullet1.transform.Rotate(Vector2.right, 0,0);
+                bossBullet1.transform.eulerAngles = new Vector3(0, 0, 150f);
                 bossBullet1.transform.localScale = new Vector3(5,5);
 
-                bossBullet2.transform.eulerAngles = new Vector3(0, 0, 120);
+                bossBullet2.transform.eulerAngles = new Vector3(0, 0, 120f);
                 bossBullet2.transform.localScale = new Vector3(2,2);
                 
 
@@ -71,7 +67,7 @@ public class Boss : MonoBehaviour
                 anim.SetTrigger("Shoot");
                 GameObject bossRetroBullet = Instantiate(bossProjectilePrefab2, bossWeapon.position, bossWeapon.rotation);
 
-                bossRetroBullet.transform.eulerAngles = new Vector3(0, 0, 180);
+                bossRetroBullet.transform.eulerAngles = new Vector3(0, 0, 180f);
             }
         }
     }

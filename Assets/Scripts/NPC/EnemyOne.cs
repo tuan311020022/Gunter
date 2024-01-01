@@ -91,6 +91,10 @@ public class EnemyOne : MonoBehaviour
         {
             Flip();
         }
+        if(other.gameObject.CompareTag("Enemy"))
+        {
+            Flip();
+        }       
     }
 
     void EnemyPatrol()
