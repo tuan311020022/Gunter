@@ -41,6 +41,10 @@ public class Move : MonoBehaviour
             // Vector2.down = (0,-1)
             transform.Translate(Vector2.down * tocDo * Time.deltaTime);
         }
-        // transform.Translate(Vector2.left * tocDo * diChuyen * Time.deltaTime);
+    }
+
+    public string GetTranslate()
+    {
+        return "hello";
     }
 }
