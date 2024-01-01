@@ -11,6 +11,7 @@ public class FlipFoot : MonoBehaviour
     void Start()
     {
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        mySpriteRenderer.flipX = false;
     }
 
     // Update is called once per frame
