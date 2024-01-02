@@ -234,11 +234,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   moveSpeed: 3
-  distance: 5
   player: {fileID: 0}
-  fireRate: 2
+  fireRate: 1
   firePoint: {fileID: 1333562734}
-  bulletPrefabs: {fileID: 2029935089232164012, guid: 6f66fc10e4f7eaf43bc4e19709c65d0c, type: 3}
+  bulletPrefabs: {fileID: 2029935089232164012, guid: 184a91e4d551df4419e28615f8dbfd57, type: 3}
   playerCheckRadius: 9
   playerLayer:
     serializedVersion: 2
