@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    private int damage = 20;
+    private int damage;
+    private float speed = 3;
 
-    private float speed = 5;
-
-    private float destroyTime = 2;
+    private float destroyTime = 5;
 
     public Move move;
 
@@ -52,6 +51,14 @@ public class BulletScript : MonoBehaviour
             EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
             enemy.TakeDamage(damage);
             Destroy(gameObject);
-        }     
+        }
+        if (other.gameObject.CompareTag("RangeEnemy"))
+        {
+            EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
+            enemy.TakeDamage(damage);
+            Destroy(gameObject);
+        }
     }
+
+
 }
