@@ -4,23 +4,38 @@ using UnityEngine;
 
 public class EnemyOne : MonoBehaviour
 {
+    #region Public
     public int damage;
     public float speed;
-    bool facingRight;
-    bool isDead;
+    public float timer; // Attack cooldown
 
-    // Ground check
+    // Ground Check
     public Transform groundCheck;
     public float groundCheckRadius = 0.1f;
     public LayerMask groundLayer;
 
     // Player Check
-    public Transform playerCheck;
     public float playerCheckRadius;
     public LayerMask playerLayer;
+    #endregion
 
 
-    Animator animator;
+    #region Private
+    private bool facingRight;
+
+    private bool detectPlayer;
+    private bool cooldown;
+    private float intTimer;
+
+    private Transform player;
+    #endregion
+    // Ground check
+
+    // Player Check
+
+
+
+    Animator anim;
 
     Rigidbody2D enemyRB;
 
@@ -29,24 +44,34 @@ public class EnemyOne : MonoBehaviour
     public AudioClip hitSound;
     void Start()
     {
-        animator = GetComponent<Animator>();
+        intTimer = timer;
+
+        anim = GetComponent<Animator>();
         enemyRB = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
 
-        // timer = changeTime;
+        player = GameObject.FindWithTag("Player").transform;
     }
 
     // Update is called once per frame
   
     void Update()
     {
-        if(!Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer))
+        if(!detectPlayer)
         {
-            Flip();
+            EnemyPatrol();
+            StopAttack();
+        }else if(detectPlayer && cooldown == false)
+        {
+            Attack();
+            ChasePlayer();
         }
-        transform.Translate(transform.right * speed * Time.deltaTime);
-        Attack();
+
+        if(cooldown)
+        {
+            anim.SetBool("Attack", false);
+        }
     }
 
     public void Flip()
@@ -58,7 +83,7 @@ public class EnemyOne : MonoBehaviour
         transform.localScale = scale;
 
         speed *= -1;
-        animator.SetBool("Walk", true);
+        anim.SetBool("Walk", true);
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
@@ -66,29 +91,42 @@ public class EnemyOne : MonoBehaviour
         {
             Flip();
         }
+        if(other.gameObject.CompareTag("Enemy"))
+        {
+            Flip();
+        }       
     }
 
-
+    void EnemyPatrol()
+    {
+        if(!Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer))
+        {
+            Flip();
+        }
+        transform.Translate(transform.right * speed * Time.deltaTime);
+    }
+    void ChasePlayer()
+    {
+        anim.SetBool("Walk", true);
+        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+    }
     void Attack()
     {
-        if(Physics2D.OverlapCircle(playerCheck.position, playerCheckRadius, playerLayer))
+        if(Physics2D.OverlapCircle(transform.position, playerCheckRadius, playerLayer))
         {
-            animator.SetTrigger("Attack");
-            
-            PlayerController player = gameObject.GetComponent<PlayerController>();
-            if(player != null)
-            {
-                player.TakeDamage(damage);
-            }
+            anim.SetTrigger("Attack");
         }
-        else{
-            return;
-        }
+        cooldown = true;
     }
 
+    void StopAttack()
+    {
+        cooldown = false;
+        anim.SetBool("Attack", false);
+    }
 
-    // private void OnDrawGizmosSelected() {
-    //     Gizmos.color = Color.red;
-    //     Gizmos.DrawWireSphere(playerCheck.position, playerCheckRadius);
-    // }
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, playerCheckRadius);
+    }
 }
