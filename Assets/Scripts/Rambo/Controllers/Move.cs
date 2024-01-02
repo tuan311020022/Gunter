@@ -42,9 +42,4 @@ public class Move : MonoBehaviour
             transform.Translate(Vector2.down * tocDo * Time.deltaTime);
         }
     }
-
-    public string GetTranslate()
-    {
-        return "hello";
-    }
 }

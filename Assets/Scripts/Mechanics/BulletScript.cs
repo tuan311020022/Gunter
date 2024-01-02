@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    public int damage;
-    public float speed;
+    private int damage = 20;
 
-    public float destroyTime;
+    private float speed = 5;
+
+    private float destroyTime = 2;
 
     public Move move;
 

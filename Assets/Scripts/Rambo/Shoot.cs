@@ -30,7 +30,6 @@ public class Shoot : MonoBehaviour
             {
                 Vector2 bulletPosition = new Vector2(ramboPosition.x - 1.5f, ramboPosition.y);
                 Instantiate(Bullet, bulletPosition, Quaternion.identity);
-
             }
         }
     }

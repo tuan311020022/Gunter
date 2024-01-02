@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0c0645c0369d3342a68cd1722e25f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 5064542398199573782, guid: 79e0259ff069373469d7949d9bda00d5, type: 3}
+  Bullet: {fileID: 387115778646453318, guid: d5dc4c345b32382448d4a17cbdf259b2, type: 3}
   mySpriteRenderer: {fileID: 0}
 --- !u!1 &1032247630
 GameObject:
@@ -450,8 +450,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972464930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0309, y: -0.031, z: 0}
-  m_LocalScale: {x: 4.137021, y: 2.357722, z: 1}
+  m_LocalPosition: {x: 0.0299, y: 0.0392, z: 0}
+  m_LocalScale: {x: 4.077101, y: 2.348295, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
