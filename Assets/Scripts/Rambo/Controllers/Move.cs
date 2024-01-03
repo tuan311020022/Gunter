@@ -5,10 +5,7 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     // sang trai = -1, sang phai = 1
-    public float diChuyen;
-    public float tocDo = 2;
-    public float rotationSpeed = 200;
-    public float mau = 100;
+    private float tocDo = 5;
     public SpriteRenderer mySpriteRenderer;
 
     // Start is called before the first frame update
