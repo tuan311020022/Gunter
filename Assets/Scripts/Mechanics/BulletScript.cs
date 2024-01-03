@@ -5,7 +5,8 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     private int damage;
-    private float speed = 3;
+
+    private float speed = 5;
 
     private float destroyTime = 5;
 
