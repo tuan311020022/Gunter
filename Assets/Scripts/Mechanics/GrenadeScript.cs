@@ -12,7 +12,7 @@ public class GrenadeScript : MonoBehaviour
 
     public SpriteRenderer grenadeRender;
 
-    public float throwForce;
+    private float throwForce = 5f;
 
     public float Delay;
 
@@ -31,6 +31,7 @@ public class GrenadeScript : MonoBehaviour
     private Rigidbody2D rb2D;
 
     public GameObject ExplosionEffect;
+
     void Start()
     {
         move = FindObjectOfType<Move>();
@@ -59,12 +60,13 @@ public class GrenadeScript : MonoBehaviour
         Destroy(gameObject, destroyTime);
         if (grenadeRender.flipX == false)
         {
-            transform.Translate(Vector2.up * speed * Time.deltaTime);
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
+            transform.Translate(Vector2.up * (speed + 3) * Time.deltaTime);
+            transform.Translate(Vector2.right * (speed - 3) * Time.deltaTime);
         }
         else
         {
-            transform.Translate(Vector2.left * speed * Time.deltaTime);
+            transform.Translate(Vector2.up * (speed + 3) * Time.deltaTime);
+            transform.Translate(Vector2.left * (speed - 3) * Time.deltaTime);
         }
         //countDown -= Time.deltaTime;
 
