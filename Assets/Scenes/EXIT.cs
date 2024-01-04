@@ -3,22 +3,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class chucnangMenu : MonoBehaviour
+public class EXIT: MonoBehaviour
 {
-    // Bat dau choi game
-    public void Play()
-    {
-        SceneManager.LoadScene(1);
-    }
-
     // Thoat game 
     public void Exit()
     {
-        Application.Quit();
-    }
-    public void TangGiamAmLuong()
-    {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
     }
     //public AudioSource audioSource;
     //void KiemTra()
