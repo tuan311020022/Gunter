@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class BossProjectile : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed;
 
     public float destroyTime;
 
     public int damage;
-    // Start is called before the first frame update
+
     void Start()
-    {
+    {        
         Destroy(gameObject, destroyTime);
     }
 
@@ -20,14 +21,13 @@ public class BossProjectile : MonoBehaviour
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
-
-     private void OnCollisionEnter2D(Collision2D other) {
+    private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Player"))
         {
             PlayerController player = other.gameObject.GetComponent<PlayerController>();
-            player.TakeDamage(10);
+            player.TakeDamage(damage);
             Destroy(gameObject);
-        }
+        }     
     }
-    
+
 }

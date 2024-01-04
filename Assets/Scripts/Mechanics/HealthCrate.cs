@@ -8,7 +8,17 @@ public class HealthCrate : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         PlayerController player = other.gameObject.GetComponent<PlayerController>();
-        player.GetHealth(health);
-        Destroy(gameObject);
+        if (other.gameObject.CompareTag("Player")) 
+        {
+            if(player.currentHealth < player.maxHealth)
+            {
+                player.GetHealth(health);
+                Destroy(gameObject);
+            }
+            else{
+                player.currentHealth = player.maxHealth;
+                Destroy(gameObject);
+            }
+        }
     }
 }

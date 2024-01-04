@@ -6,10 +6,12 @@ public class Shoot : MonoBehaviour
 {
     public GameObject Bullet;
 
+    public SpriteRenderer mySpriteRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -17,7 +19,18 @@ public class Shoot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.J))
         {
-            Instantiate(Bullet, transform.position, Quaternion.identity);
+            Vector2 ramboPosition = mySpriteRenderer.transform.position;
+
+            if (mySpriteRenderer.flipX == false)
+            {
+                Vector2 bulletPosition = new Vector2(ramboPosition.x + 1.5f, ramboPosition.y);
+                Instantiate(Bullet, bulletPosition, Quaternion.identity);
+            }
+            else
+            {
+                Vector2 bulletPosition = new Vector2(ramboPosition.x - 1.5f, ramboPosition.y);
+                Instantiate(Bullet, bulletPosition, Quaternion.identity);
+            }
         }
     }
 }
