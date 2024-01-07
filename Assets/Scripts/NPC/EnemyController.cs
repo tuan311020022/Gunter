@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     #region Public
     public float maxHealth;
     public float moveSpeed;
+    public int score;
     public Transform player;
 
     #endregion
@@ -23,16 +24,18 @@ public class EnemyController : MonoBehaviour
     protected Rigidbody2D rb2D;
 
     protected bool isDead = false;
+    protected ScoreManager scoreManager;
     #endregion
-    ScoreManager scoreManager;
     void Start() {
         anim = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
 
-        //player = GameObject.FindWithTag("Player").transform;
-        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
+        player = GameObject.FindWithTag("Player").transform;
+        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();    
+
     }
+
     void Update()
     {
         //targetDistance = transform.position.x - player.position.x;
@@ -67,12 +70,10 @@ public class EnemyController : MonoBehaviour
         if(maxHealth <= 0)
         {
             Dead();
-            //scoreManager.AddScore(50);
         }
-        else{
-            StartCoroutine(DamageColorCoroutine());
-            Debug.Log(StartCoroutine(DamageColorCoroutine()));
-        }
+        // else {
+        //     StartCoroutine(DamageColorCoroutine());
+        // }
     }
 
     void Dead()
@@ -80,15 +81,14 @@ public class EnemyController : MonoBehaviour
         isDead = true;
         anim.SetBool("Dead", true);
         Destroy(gameObject, 0.9f);
+        scoreManager.AddScore(score);
     }
-
-    IEnumerator DamageColorCoroutine()
-    {
-        sprite.color = Color.yellow;
-        yield return new WaitForSeconds(0.1f);
-        sprite.color = Color.white;
-
-    }
+    // IEnumerator DamageColorCoroutine()
+    // {
+    //     sprite.color = Color.yellow;
+    //     yield return new WaitForSeconds(0.2f);
+    //     sprite.color = Color.white;
+    // }
 
 
 

@@ -6,6 +6,8 @@ public class Hostage : MonoBehaviour
 {
     [SerializeField] float destroyTime;
     [SerializeField] ParticleSystem myParticle;
+
+    public int score;
     private float speed = 4;
 
     bool isRelease;
@@ -42,7 +44,7 @@ public class Hostage : MonoBehaviour
             boxCollider.enabled = false;
             isRelease = true;
             PlayParticle();
-            scoreManager.AddScore(100);
+            scoreManager.AddScore(score);
         }
         else{
             isRelease = false;

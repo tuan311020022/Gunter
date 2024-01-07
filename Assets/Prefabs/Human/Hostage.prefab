@@ -148,3 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 2
   myParticle: {fileID: 19800018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
+  score: 100

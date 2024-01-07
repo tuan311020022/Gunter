@@ -27,10 +27,13 @@ public class RangeEnemy : EnemyController
     public LayerMask groundLayer;
 
     #endregion
+
     void Start()
     {
         anim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player").transform;
+        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();    
+
     }
 
     void Update()
@@ -85,5 +88,4 @@ public class RangeEnemy : EnemyController
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, playerCheckRadius);
     }
-
 }

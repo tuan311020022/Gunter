@@ -13,8 +13,6 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         scoreText.text = "Score: " + score.ToString();
-
-        Debug.Log(score);
     }
 
     public void AddScore(int number)
