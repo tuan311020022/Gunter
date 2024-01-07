@@ -30,7 +30,7 @@ public class RangeEnemy : EnemyController
     void Start()
     {
         anim = GetComponent<Animator>();
-        //player = GameObject.FindWithTag("Player").transform;
+        player = GameObject.FindWithTag("Player").transform;
     }
 
     void Update()
@@ -43,10 +43,6 @@ public class RangeEnemy : EnemyController
             FlipWhenSpottedPlayer(distanceToPlayer);
             MoveEnemy();
         }
-        // else
-        // {
-        //     EnemyPatrol();
-        // }
     }
 
     void Attack()
@@ -59,7 +55,7 @@ public class RangeEnemy : EnemyController
                 nextFire = Time.time + fireRate;
                 GameObject enemyBullet = Instantiate(bulletPrefabs, firePoint.position, Quaternion.identity);
             }
-        }else{
+        }else if(!Physics2D.OverlapCircle(transform.position, playerCheckRadius, playerLayer)){
             detectPlayer = false;
             anim.SetBool("Walk", false);
         }
