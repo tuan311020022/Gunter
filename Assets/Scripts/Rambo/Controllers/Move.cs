@@ -6,12 +6,16 @@ public class Move : MonoBehaviour
 {
     // sang trai = -1, sang phai = 1
     private float tocDo = 5;
+    private float trai_phai;
     public SpriteRenderer mySpriteRenderer;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+
         mySpriteRenderer.flipX = false;
     }
 
@@ -24,19 +28,28 @@ public class Move : MonoBehaviour
             transform.Translate(Vector2.right * tocDo * Time.deltaTime);
             mySpriteRenderer.flipX = false;
 
-        } else if (Input.GetKey(KeyCode.LeftArrow)) // an nut sang trai
+        }
+        if (Input.GetKey(KeyCode.LeftArrow)) // an nut sang trai
         {
             //Vector2.left = (-1,0)
             transform.Translate(Vector2.left * tocDo * Time.deltaTime);
             mySpriteRenderer.flipX = true;
         }
-        if (Input.GetKey(KeyCode.UpArrow)) 
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             // Vector2.up = (0,1)
             transform.Translate(Vector2.up * 20 * Time.deltaTime);
-        } else if (Input.GetKey(KeyCode.DownArrow)){
-            // Vector2.down = (0,-1)
-            transform.Translate(Vector2.down * tocDo * Time.deltaTime);
         }
+
+        trai_phai = Input.GetAxis("Horizontal");
+        // Gia tri tuyet doi
+        anim.SetFloat("move", Mathf.Abs(trai_phai));
+
+
+        // nhay xuong
+        //} else if (Input.GetKey(KeyCode.DownArrow)){
+        //    // Vector2.down = (0,-1)
+        //    transform.Translate(Vector2.down * tocDo * Time.deltaTime);
+        //}
     }
 }
