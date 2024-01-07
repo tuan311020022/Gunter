@@ -25,19 +25,19 @@ public class E3 : EnemyController
     void Update()
     {
         Move();
-        FlipIfNeeded(player.position.x - transform.position.x);
+        FlipWhenSpottedPlayer(player.position.x - transform.position.x);
     }
 
     void Move()
     {
         if(Physics2D.OverlapCircle(transform.position, playerCheckRadius, playerLayer))
         {
-            detectPlayer = true;
+            //detectPlayer = true;
             anim.SetBool("Walk", true);
             transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
         }
         else{
-            detectPlayer = false;
+            //detectPlayer = false;
             transform.position = Vector2.MoveTowards(transform.position, currentPos, moveSpeed * Time.deltaTime);
             anim.SetBool("Walk", false);
         }

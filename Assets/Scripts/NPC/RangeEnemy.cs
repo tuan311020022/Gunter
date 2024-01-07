@@ -1,11 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class TestEnemy : EnemyController
+public class RangeEnemy : EnemyController
 { 
-    #region Public
+     #region Public
     public float fireRate;
     public Transform firePoint;
     public GameObject bulletPrefabs;
@@ -21,7 +22,7 @@ public class TestEnemy : EnemyController
     private int direction = -1;
     private float directionTimer = 2;
     private float nextDirection = 0;
-    private bool inRange;
+    private bool detectPlayer;
 
     // Ground Check
     public Transform groundCheck;
@@ -32,7 +33,7 @@ public class TestEnemy : EnemyController
     void Start()
     {
         anim = GetComponent<Animator>();
-        player = GameObject.FindWithTag("Player").transform;
+        //player = GameObject.FindWithTag("Player").transform;
     }
 
     void Update()
@@ -42,13 +43,13 @@ public class TestEnemy : EnemyController
         Attack();
         if(detectPlayer)
         {
-            FlipIfNeeded(distanceToPlayer);
+            FlipWhenSpottedPlayer(distanceToPlayer);
             MoveEnemy();
         }
-        else
-        {
-            EnemyPatrol();
-        }
+        // else
+        // {
+        //     EnemyPatrol();
+        // }
     }
 
     void Attack()
@@ -63,6 +64,7 @@ public class TestEnemy : EnemyController
             }
         }else{
             detectPlayer = false;
+            anim.SetBool("Walk", false);
         }
     }
 
@@ -82,19 +84,10 @@ public class TestEnemy : EnemyController
         }
         anim.SetBool("Walk", true);
     }
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.CompareTag("Obstacle"))
-        {
-            Flip();
-        }
-    }
 
     private void OnDrawGizmos() {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, playerCheckRadius);
-
-        // Gizmos.color = Color.red;
-        // Gizmos.DrawWireSphere(groundCheck.transform.position, groundCheckRadius);
     }
 
 }

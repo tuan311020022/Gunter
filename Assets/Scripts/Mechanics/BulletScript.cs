@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    private int damage;
+    public int damage = 10;
 
-    private float speed = 5;
+    public float speed = 5;
 
-    private float destroyTime = 5;
+    public float destroyTime = 5;
 
     public Move move;
 
@@ -47,15 +47,16 @@ public class BulletScript : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
         if(other.gameObject.CompareTag("Enemy"))
         {
-            EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
+
             enemy.TakeDamage(damage);
             Destroy(gameObject);
         }
         if (other.gameObject.CompareTag("RangeEnemy"))
         {
-            EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
+            // EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
             enemy.TakeDamage(damage);
             Destroy(gameObject);
         }

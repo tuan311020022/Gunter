@@ -12,6 +12,7 @@ public class E1 : MonoBehaviour
     public float attackDistance;
     public float moveSpeed;
     public float timer; // Attack cooldown
+
     #endregion
 
     #region Private Variables

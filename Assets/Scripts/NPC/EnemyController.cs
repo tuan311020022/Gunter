@@ -5,24 +5,17 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     #region Public
-    public int maxHealth;
-
+    public float maxHealth;
     public float moveSpeed;
     public Transform player;
 
     #endregion
 
-    #region Private
-    private float currentHealth;
-
-    #endregion
-
     #region Protected
+
     protected bool facingRight;
 
-    protected bool detectPlayer;
-
-    protected float targetDistance;
+    //protected float targetDistance;
 
     protected SpriteRenderer sprite;
 
@@ -32,8 +25,6 @@ public class EnemyController : MonoBehaviour
     #endregion
 
     void Start() {
-        currentHealth = maxHealth;
-
         anim = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
@@ -42,7 +33,7 @@ public class EnemyController : MonoBehaviour
     }
     void Update()
     {
-        targetDistance = transform.position.x - player.position.x;
+        //targetDistance = transform.position.x - player.position.x;
     }
 
     protected void Flip()
@@ -67,11 +58,10 @@ public class EnemyController : MonoBehaviour
         anim.SetBool("Walk", true);
     }
 
-    protected void FlipIfNeeded(float horizontalDistance) // horizontalDistance = player.position.x - transform.position.x
+    protected void FlipWhenSpottedPlayer(float horizontalDistance) // horizontalDistance = player.position.x - transform.position.x
     {
         if ((horizontalDistance > 0 && !facingRight) || (horizontalDistance < 0 && facingRight))
         {
-            // Flip the enemy
             facingRight = !facingRight;
             Vector3 scale = transform.localScale;
             scale.x *= -1;
@@ -81,8 +71,8 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        if(currentHealth <= 0)
+        maxHealth -= damage;
+        if(maxHealth <= 0)
         {
             Dead();
         }
