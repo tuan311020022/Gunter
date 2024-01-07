@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MENU.unity
     guid: 1bec15adae32a4982a6b30398caa5442
   - enabled: 1
-    path: Assets/Scenes/GAME.unity
-    guid: 7b021abe656c64d87990ff2cfb2e3be9
-  - enabled: 1
-    path: Assets/Scenes/TangGiamAmLuong.unity
-    guid: 1005c46f6c8504e1c8c181abe60e6e06
+    path: Assets/Scenes/testMap1.unity
+    guid: 5b6a9813e92717e4fa8cd014cbb1fa8f
   m_configObjects: {}
