@@ -19,9 +19,6 @@ public class RangeEnemy : EnemyController
 
     private float nextFire;
 
-    private int direction = -1;
-    private float directionTimer = 2;
-    private float nextDirection = 0;
     private bool detectPlayer;
 
     // Ground Check

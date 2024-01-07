@@ -28,13 +28,10 @@ public class Boss : MonoBehaviour
     void Start() {
         anim = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
-
-        //player = GameObject.FindWithTag("Player").transform;
     }
 
     void Update() {
         Attack();
-
     }
 
     void Attack()

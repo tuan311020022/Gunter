@@ -15,8 +15,6 @@ public class EnemyController : MonoBehaviour
 
     protected bool facingRight;
 
-    //protected float targetDistance;
-
     protected SpriteRenderer sprite;
 
     protected Animator anim;
@@ -38,16 +36,6 @@ public class EnemyController : MonoBehaviour
 
     protected void Flip()
     {
-        // Vector3 scale = transform.localScale;
-
-        // if(player.transform.position.x > transform.position.x )
-        // {
-        //     scale.x = Mathf.Abs(scale.x) * -1;
-        // }else if (player.transform.position.x < transform.position.x){
-        //     scale.x = Mathf.Abs(scale.x);
-        // }
-        
-        // transform.localScale = scale;
         facingRight = !facingRight;
 
         Vector3 scale = transform.localScale;
