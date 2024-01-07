@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class EnemyController : MonoBehaviour
 {
@@ -20,14 +21,17 @@ public class EnemyController : MonoBehaviour
     protected Animator anim;
 
     protected Rigidbody2D rb2D;
-    #endregion
 
+    protected bool isDead = false;
+    #endregion
+    ScoreManager scoreManager;
     void Start() {
         anim = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
 
-        player = GameObject.FindWithTag("Player").transform;
+        //player = GameObject.FindWithTag("Player").transform;
+        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
     }
     void Update()
     {
@@ -63,24 +67,27 @@ public class EnemyController : MonoBehaviour
         if(maxHealth <= 0)
         {
             Dead();
+            //scoreManager.AddScore(50);
         }
         else{
             StartCoroutine(DamageColorCoroutine());
+            Debug.Log(StartCoroutine(DamageColorCoroutine()));
         }
     }
 
     void Dead()
     {
-        anim.SetTrigger("Die");
-        
+        isDead = true;
+        anim.SetBool("Dead", true);
         Destroy(gameObject, 0.9f);
     }
 
     IEnumerator DamageColorCoroutine()
     {
-        sprite.color = Color.red;
-        yield return new WaitForSeconds(0.2f);
+        sprite.color = Color.yellow;
+        yield return new WaitForSeconds(0.1f);
         sprite.color = Color.white;
+
     }
 
 

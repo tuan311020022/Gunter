@@ -36,12 +36,15 @@ public class RangeEnemy : EnemyController
     void Update()
     {
         distanceToPlayer = player.position.x - transform.position.x;
-
-        Attack();
-        if(detectPlayer)
+        
+        if (!isDead)
         {
-            FlipWhenSpottedPlayer(distanceToPlayer);
-            MoveEnemy();
+            Attack();
+            if(detectPlayer)
+            {
+                FlipWhenSpottedPlayer(distanceToPlayer);
+                MoveEnemy();
+            }
         }
     }
 

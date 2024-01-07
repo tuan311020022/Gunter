@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
 
     public Image healthBar;
     #endregion
-
     Animator animator;
     private void Start() {
         currentHealth = maxHealth;

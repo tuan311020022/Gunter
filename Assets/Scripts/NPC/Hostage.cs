@@ -13,9 +13,12 @@ public class Hostage : MonoBehaviour
 
     BoxCollider2D boxCollider;
 
+    ScoreManager scoreManager;
     private void Start() {
         animator = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+
+        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
     }
 
     private void Update() {
@@ -39,6 +42,7 @@ public class Hostage : MonoBehaviour
             boxCollider.enabled = false;
             isRelease = true;
             PlayParticle();
+            scoreManager.AddScore(100);
         }
         else{
             isRelease = false;

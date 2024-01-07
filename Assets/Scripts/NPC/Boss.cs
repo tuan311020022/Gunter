@@ -41,7 +41,7 @@ public class Boss : MonoBehaviour
             if(Time.time > nextFire ) 
             {
                 nextFire = Time.time + fireRate;
-                anim.SetTrigger("Shoot");
+                anim.SetTrigger("HighAttack");
                 GameObject bossBullet = Instantiate(bossProjectilePrefab, bossWeapon.position, bossWeapon.rotation);
                 GameObject bossBullet1 = Instantiate(bossProjectilePrefab, bossWeapon.position, bossWeapon.rotation);
                 GameObject bossBullet2 = Instantiate(bossProjectilePrefab, bossWeapon.position, bossWeapon.rotation);
@@ -61,7 +61,7 @@ public class Boss : MonoBehaviour
             if(Time.time > nextFire1)
             {
                 nextFire1 = Time.time + fireRate1;
-                anim.SetTrigger("Shoot");
+                anim.SetTrigger("LowAttack");
                 GameObject bossRetroBullet = Instantiate(bossProjectilePrefab2, bossWeapon.position, bossWeapon.rotation);
 
                 bossRetroBullet.transform.eulerAngles = new Vector3(0, 0, 180f);

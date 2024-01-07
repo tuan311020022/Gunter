@@ -53,6 +53,7 @@ public class BulletScript : MonoBehaviour
             enemy.TakeDamage(damage);
             Destroy(gameObject);
         }
+        
         if(other.gameObject.CompareTag("RangeEnemy"))
         {
             
