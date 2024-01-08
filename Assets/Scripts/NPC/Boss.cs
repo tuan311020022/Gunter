@@ -1,40 +1,46 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class Boss : MonoBehaviour
+public class Boss : EnemyController
 {
+    #region Public Var
+    // Spawn Bullet
     public float fireRate = 3;
     public float fireRate1 = 20;
     private float nextFire = 0;
     private float nextFire1 = 0;
-
-    private Animator anim;
 
     public GameObject bossProjectilePrefab;
     public GameObject bossProjectilePrefab2;
 
     public Transform bossWeapon;
 
+    // Spawn Enemy
+    public float spawnRate;
+    private float nextSpawn = 0;
+    public Transform enemySpawner;
+    public GameObject[] enemyPrefabs;
+
+    // Check player
     public float playerCheckRadius;
     public LayerMask playerLayer;
+    #endregion
 
-    private Transform player;
-
-    Rigidbody2D rb2D;
 
     void Start() {
         anim = GetComponent<Animator>();
-        rb2D = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
 
-        //player = GameObject.FindWithTag("Player").transform;
+        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();    
+
     }
 
     void Update() {
-        Attack();
-
+        if(!isDead)
+        {
+            Attack();
+        }
     }
 
     void Attack()
@@ -44,30 +50,36 @@ public class Boss : MonoBehaviour
             if(Time.time > nextFire ) 
             {
                 nextFire = Time.time + fireRate;
-                anim.SetTrigger("Shoot");
+                anim.SetTrigger("HighAttack");
                 GameObject bossBullet = Instantiate(bossProjectilePrefab, bossWeapon.position, bossWeapon.rotation);
                 GameObject bossBullet1 = Instantiate(bossProjectilePrefab, bossWeapon.position, bossWeapon.rotation);
                 GameObject bossBullet2 = Instantiate(bossProjectilePrefab, bossWeapon.position, bossWeapon.rotation);
 
                 bossBullet.transform.eulerAngles = new Vector3(0, 0, 90f);
 
-                bossBullet1.transform.eulerAngles = new Vector3(0, 0, 150f);
-                bossBullet1.transform.localScale = new Vector3(5,5);
+                bossBullet1.transform.eulerAngles = new Vector3(0, 0, 120f);
+                bossBullet1.transform.localScale = new Vector3(2,2);
 
-                bossBullet2.transform.eulerAngles = new Vector3(0, 0, 120f);
-                bossBullet2.transform.localScale = new Vector3(2,2);
-                
-
-
+                bossBullet2.transform.eulerAngles = new Vector3(0, 0, 140f);
+                bossBullet2.transform.localScale = new Vector3(3,3);
 
             }
             if(Time.time > nextFire1)
             {
                 nextFire1 = Time.time + fireRate1;
-                anim.SetTrigger("Shoot");
+                anim.SetTrigger("LowAttack");
                 GameObject bossRetroBullet = Instantiate(bossProjectilePrefab2, bossWeapon.position, bossWeapon.rotation);
 
                 bossRetroBullet.transform.eulerAngles = new Vector3(0, 0, 180f);
+            }
+
+            if(Time.time > nextSpawn)
+            {
+                int randomIndex = Random.Range(0, enemyPrefabs.Length);
+                nextSpawn = Time.time + spawnRate;
+                GameObject spawnEnemy1 = Instantiate(enemyPrefabs[randomIndex], enemySpawner.position, enemySpawner.rotation);
+                GameObject spawnEnemy2 = Instantiate(enemyPrefabs[randomIndex], enemySpawner.position, enemySpawner.rotation);
+
             }
         }
     }

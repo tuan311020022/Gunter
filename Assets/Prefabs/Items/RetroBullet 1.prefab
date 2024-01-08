@@ -116,5 +116,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 12
   destroyTime: 3
-  damage: 50
+  damage: 20
   growthRate: 1

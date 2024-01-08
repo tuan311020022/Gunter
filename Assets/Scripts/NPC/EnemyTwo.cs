@@ -24,7 +24,6 @@ public class EnemyTwo : EnemyController
     void Start()
     {
         anim = GetComponent<Animator>();
-        rb2D = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
     }
 

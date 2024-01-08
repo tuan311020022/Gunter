@@ -10,6 +10,9 @@ TagManager:
   - Barrel
   - Hit
   - RangeEnemy
+  - FxTemporaire
+  - Hostage
+  - ScoreManager
   layers:
   - Default
   - TransparentFX
@@ -20,8 +23,8 @@ TagManager:
   - Ground
   - Player
   - NPC
-  - triggerEnemy
-  - triggerPlayer
+  - 
+  - 
   - 
   - 
   - 
