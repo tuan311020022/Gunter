@@ -32,6 +32,8 @@ public class RangeEnemy : EnemyController
     {
         anim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player").transform;
+        sprite = GetComponent<SpriteRenderer>();
+
         scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();    
 
     }

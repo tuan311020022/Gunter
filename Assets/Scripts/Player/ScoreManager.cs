@@ -6,6 +6,7 @@ public class ScoreManager : MonoBehaviour
 {
     public Text scoreText;
     public int score = 0;
+
     void Start()
     {
         score = 0;
@@ -19,4 +20,5 @@ public class ScoreManager : MonoBehaviour
     {
         score += number;
     }
+
 }

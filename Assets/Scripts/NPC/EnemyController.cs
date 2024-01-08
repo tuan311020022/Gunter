@@ -70,10 +70,9 @@ public class EnemyController : MonoBehaviour
         if(maxHealth <= 0)
         {
             Dead();
+        }else {
+            StartCoroutine(DamageColorCoroutine());
         }
-        // else {
-        //     StartCoroutine(DamageColorCoroutine());
-        // }
     }
 
     void Dead()
@@ -81,14 +80,17 @@ public class EnemyController : MonoBehaviour
         isDead = true;
         anim.SetBool("Dead", true);
         Destroy(gameObject, 0.9f);
-        scoreManager.AddScore(score);
+        if(isDead && maxHealth == 0)
+        {
+            scoreManager.AddScore(score);
+        }
     }
-    // IEnumerator DamageColorCoroutine()
-    // {
-    //     sprite.color = Color.yellow;
-    //     yield return new WaitForSeconds(0.2f);
-    //     sprite.color = Color.white;
-    // }
+    IEnumerator DamageColorCoroutine()
+    {
+        sprite.color = Color.yellow;
+        yield return new WaitForSeconds(0.2f);
+        sprite.color = Color.white;
+    }
 
 
 

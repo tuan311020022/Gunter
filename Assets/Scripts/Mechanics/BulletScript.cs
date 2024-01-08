@@ -56,7 +56,7 @@ public class BulletScript : MonoBehaviour
         
         if(other.gameObject.CompareTag("RangeEnemy"))
         {
-            RangeEnemy enemy = other.gameObject.GetComponent<RangeEnemy>();
+            EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
             enemy.TakeDamage(damage);
             Destroy(gameObject);
         }

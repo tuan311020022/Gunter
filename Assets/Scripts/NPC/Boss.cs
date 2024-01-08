@@ -2,18 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class Boss : MonoBehaviour
+public class Boss : EnemyController
 {
     public float fireRate = 3;
     public float fireRate1 = 20;
     private float nextFire = 0;
     private float nextFire1 = 0;
 
-
-
-    public int maxHealth;
+    //public int maxHealth;
 
     public GameObject bossProjectilePrefab;
     public GameObject bossProjectilePrefab2;
@@ -24,19 +21,20 @@ public class Boss : MonoBehaviour
     public float playerCheckRadius;
     public LayerMask playerLayer;
 
-    private bool isDead = false;
-    private Animator anim;
+    //private bool isDead = false;
+    //private Animator anim;
 
-    private Transform player;
+    //private Transform player;
 
-    private SpriteRenderer sprite;
-
-    Rigidbody2D rb2D;
+    //Rigidbody2D rb2D;
 
     void Start() {
         anim = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+
+        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();    
+
     }
 
     void Update() {
@@ -78,32 +76,6 @@ public class Boss : MonoBehaviour
                 bossRetroBullet.transform.eulerAngles = new Vector3(0, 0, 180f);
             }
         }
-    }
-
-    public void TakeDamage(int damage)
-    {
-        maxHealth -= damage;
-        if(maxHealth <= 0)
-        {
-            Dead();
-        }
-        else {
-            StartCoroutine(DamageColorCoroutine());
-        }
-    }
-
-    void Dead()
-    {
-        isDead = true;
-        anim.SetBool("Dead", true);
-        Destroy(gameObject, 0.9f);
-    }
-
-    IEnumerator DamageColorCoroutine()
-    {
-        sprite.color = Color.yellow;
-        yield return new WaitForSeconds(0.2f);
-        sprite.color = Color.white;
     }
 
     private void OnDrawGizmos() {
