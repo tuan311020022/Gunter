@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class Boss : EnemyController
 {
+    #region Public Var
     public float fireRate = 3;
     public float fireRate1 = 20;
     private float nextFire = 0;
     private float nextFire1 = 0;
 
-    //public int maxHealth;
 
     public GameObject bossProjectilePrefab;
     public GameObject bossProjectilePrefab2;
@@ -20,17 +20,11 @@ public class Boss : EnemyController
 
     public float playerCheckRadius;
     public LayerMask playerLayer;
-
+    #endregion
     //private bool isDead = false;
-    //private Animator anim;
-
-    //private Transform player;
-
-    //Rigidbody2D rb2D;
 
     void Start() {
         anim = GetComponent<Animator>();
-        rb2D = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
 
         scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();    

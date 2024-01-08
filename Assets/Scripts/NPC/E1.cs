@@ -3,124 +3,107 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class E1 : MonoBehaviour
+public class E1 : EnemyController
 {
-    #region Public Variables
-    public Transform rayCast;
-    public LayerMask raycastMask;
-    public float rayCastLength;
-    public float attackDistance;
-    public float moveSpeed;
-    public float timer; // Attack cooldown
+    #region Public Var
+    public float attackDistance; //Minimum distance for attack
+    public float timer; //Timer for cooldown between attacks
+
+    // Ground Check
+    public Transform groundCheck;
+    public float groundCheckRadius;
+    public LayerMask groundLayer;
+
+    // Player Check
+    public float playerCheckRadius = 10f;
+    public LayerMask playerLayer;
+    #endregion
+
+
+    #region Private Var
+    private float distanceToPlayer;
+
+    private float distance;
+
+    private bool isPatrol;
 
     #endregion
 
-    #region Private Variables
-    private RaycastHit2D hit;
-    private GameObject target;
-    private Animator anim;
-    private float distance; // distance between player and enemy
-    private bool inRange; // if player in Range
-    private bool cooling; // check if enemy cooling after attack
-    private float intTimer;
-    #endregion
-    
-    void Awake() {
-        intTimer = timer;
+
+    private void Start() {
+        player = GameObject.FindWithTag("Player").transform;
 
         anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
+        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();    
     }
-    
-    // Update is called once per frame
     void Update()
     {
-        if(inRange)
-        {
-            hit = Physics2D.Raycast(rayCast.position, Vector2.left, rayCastLength, raycastMask);
-            
-        }
+        //distanceToPlayer = player.position.x - transform.position.x;
+        //FlipWhenSpottedPlayer(distanceToPlayer);
 
-        if(hit.collider != null)
+        if(Physics2D.OverlapCircle(transform.position, playerCheckRadius, playerLayer))
         {
+            isPatrol = false;
             EnemyLogic();
+            FlipWhenSpottedPlayer(distanceToPlayer);
         }
-        else if(hit.collider == null)
-        {
-            inRange = false;
-        }
-
-        if(inRange == false)
-        {
-            anim.SetBool("Walk", false);
-            StopAttack();
-        }
-        RaycastDebugger();
-    }
-    
-    private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.tag == "Player")
-        {
-            target = other.gameObject;
-            inRange = true;
-        }
+        // EnemyPatrol();
     }
 
     void EnemyLogic()
     {
-        distance = Vector2.Distance(transform.position, target.transform.position);
-        
-        if(distance > attackDistance)
-        {
-            Move();
-            StopAttack();
-        }else if(distance <= attackDistance && cooling == false)
-        {
-            Attack();
-        }
-        
-        if(cooling)
-        {
-            anim.SetBool("Attack", false);
-        }
-    }
+        distance = Vector2.Distance(transform.position, player.transform.position);
 
-    void Move()
-    {
-        anim.SetBool("Walk", true);
-        if(!anim.GetCurrentAnimatorStateInfo(0).IsName("E1_Attack"))
+        if(!isDead)
         {
-            Vector2 targetPosition = new Vector2(target.transform.position.x, transform.position.y);
-            
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            if(!isPatrol)
+            {
+                EnemyChase();
+                Attack();
+            }else{
+                anim.SetBool("Walk", false);
+            }
         }
-    }
 
+
+    }
     void Attack()
     {
-        timer = intTimer;
-    //    attackMode = true;
-
-        anim.SetBool("Walk", false);
-        anim.SetBool("Attack", true);
+        distanceToPlayer = player.position.x - transform.position.x;
+        if(distance < attackDistance && !isPatrol)
+        {
+            anim.SetBool("Walk", false);
+            anim.SetBool("Attack", true);
+        }
     }
-
-    void StopAttack()
+    void EnemyChase()
     {
-        cooling = false;
-    //    attackMode = false;
+        anim.SetBool("Walk", true);
         anim.SetBool("Attack", false);
+        transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
     }
+    // void EnemyPatrol()
+    // {
+    //     isPatrol = true;
+    //     //transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+    //     anim.SetBool("Walk", true);
+    //     if(!Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer) && isPatrol)
+    //     {
+    //         Flip();
+    //     }
 
-    void RaycastDebugger()
-    {
-        if(distance > attackDistance)
-        {
-            Debug.DrawRay(rayCast.position, Vector2.left * rayCastLength, Color.red);
-        }
-        else if(distance < attackDistance)
-        {
-            Debug.DrawRay(rayCast.position, Vector2.left * rayCastLength, Color.green);
+    // }
 
-        }
+    // private void OnCollisionEnter2D(Collision2D other) {
+    //     if(other.gameObject.CompareTag("Obstacle"))
+    //     {
+    //         isPatrol = true;
+    //         Flip();
+    //     }
+    // }
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, playerCheckRadius);
     }
 }

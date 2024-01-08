@@ -14,24 +14,19 @@ public class EnemyController : MonoBehaviour
     #endregion
 
     #region Protected
-
     protected bool facingRight;
 
-    protected SpriteRenderer sprite;
-
     protected Animator anim;
-
-    protected Rigidbody2D rb2D;
-
+    protected SpriteRenderer sprite;
     protected bool isDead = false;
     protected ScoreManager scoreManager;
+
     #endregion
     void Start() {
-        anim = GetComponent<Animator>();
-        rb2D = GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
-
         player = GameObject.FindWithTag("Player").transform;
+
+        anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
         scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();    
 
     }

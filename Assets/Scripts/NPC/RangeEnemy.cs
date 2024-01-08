@@ -16,15 +16,8 @@ public class RangeEnemy : EnemyController
 
     #region Private
     private float distanceToPlayer;
-
     private float nextFire;
-
     private bool detectPlayer;
-
-    // Ground Check
-    public Transform groundCheck;
-    public float groundCheckRadius = 0.1f;
-    public LayerMask groundLayer;
 
     #endregion
 
@@ -73,17 +66,6 @@ public class RangeEnemy : EnemyController
     {
         anim.SetBool("Walk", true);
         transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
-    }
-
-    void EnemyPatrol()
-    {
-        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
-
-        if(!Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer) && !detectPlayer)
-        {
-            Flip();
-        }
-        anim.SetBool("Walk", true);
     }
 
     private void OnDrawGizmos() {
