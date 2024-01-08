@@ -140,7 +140,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ae4fd2be4ed209447bc834470a78f52a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -239,12 +239,7 @@ MonoBehaviour:
   fireRate: 1
   firePoint: {fileID: 1333562734}
   bulletPrefabs: {fileID: 2029935089232164012, guid: 184a91e4d551df4419e28615f8dbfd57, type: 3}
-  playerCheckRadius: 9
+  playerCheckRadius: 10
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
-  groundCheck: {fileID: 1481173075}
-  groundCheckRadius: 0.3
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64

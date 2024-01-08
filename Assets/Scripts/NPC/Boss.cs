@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,22 +5,28 @@ using UnityEngine;
 public class Boss : EnemyController
 {
     #region Public Var
+    // Spawn Bullet
     public float fireRate = 3;
     public float fireRate1 = 20;
     private float nextFire = 0;
     private float nextFire1 = 0;
 
-
     public GameObject bossProjectilePrefab;
     public GameObject bossProjectilePrefab2;
 
     public Transform bossWeapon;
-    public Transform yBound;
 
+    // Spawn Enemy
+    public float spawnRate;
+    private float nextSpawn = 0;
+    public Transform enemySpawner;
+    public GameObject[] enemyPrefabs;
+
+    // Check player
     public float playerCheckRadius;
     public LayerMask playerLayer;
     #endregion
-    //private bool isDead = false;
+
 
     void Start() {
         anim = GetComponent<Animator>();
@@ -57,8 +62,6 @@ public class Boss : EnemyController
 
                 bossBullet2.transform.eulerAngles = new Vector3(0, 0, 140f);
                 bossBullet2.transform.localScale = new Vector3(3,3);
-                
-
 
             }
             if(Time.time > nextFire1)
@@ -68,6 +71,15 @@ public class Boss : EnemyController
                 GameObject bossRetroBullet = Instantiate(bossProjectilePrefab2, bossWeapon.position, bossWeapon.rotation);
 
                 bossRetroBullet.transform.eulerAngles = new Vector3(0, 0, 180f);
+            }
+
+            if(Time.time > nextSpawn)
+            {
+                int randomIndex = Random.Range(0, enemyPrefabs.Length);
+                nextSpawn = Time.time + spawnRate;
+                GameObject spawnEnemy1 = Instantiate(enemyPrefabs[randomIndex], enemySpawner.position, enemySpawner.rotation);
+                GameObject spawnEnemy2 = Instantiate(enemyPrefabs[randomIndex], enemySpawner.position, enemySpawner.rotation);
+
             }
         }
     }

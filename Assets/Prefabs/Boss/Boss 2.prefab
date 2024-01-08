@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3881527282473151126}
   m_Layer: 0
-  m_Name: yBound
+  m_Name: EnemySpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3881527282473151127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.31, y: 3.84, z: 0}
+  m_LocalPosition: {x: 0.45, y: 1.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -104,7 +104,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 92a88fe264040e14abe22e270cd967f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -156,7 +156,6 @@ GameObject:
   - component: {fileID: 3881527284418010935}
   - component: {fileID: 3881527284418010934}
   - component: {fileID: 3881527284418010932}
-  - component: {fileID: 3881527284418010930}
   m_Layer: 0
   m_Name: Boss 2
   m_TagString: Enemy
@@ -221,7 +220,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 99c638a1105df024bb30154242365165, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -285,7 +284,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.25339186}
@@ -322,21 +321,12 @@ MonoBehaviour:
   bossProjectilePrefab: {fileID: 2029935089232164012, guid: 6f66fc10e4f7eaf43bc4e19709c65d0c, type: 3}
   bossProjectilePrefab2: {fileID: 6148371636724051210, guid: d7f239566e9b6a24bbe1bd28dc7c3b93, type: 3}
   bossWeapon: {fileID: 8094572853278188237}
-  yBound: {fileID: 3881527282473151126}
+  spawnRate: 15
+  enemySpawner: {fileID: 3881527282473151126}
+  enemyPrefabs:
+  - {fileID: 8455757277063076444, guid: 3e5e7821b42bb424db07c0f094e1a119, type: 3}
+  - {fileID: 6387541707499144429, guid: b3361b53e310d004ea7233154c5c3cb7, type: 3}
   playerCheckRadius: 15
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
---- !u!114 &3881527284418010930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8094572853278188239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 858006a2096144a438d1a51df143eb43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Spawner: {fileID: 0}

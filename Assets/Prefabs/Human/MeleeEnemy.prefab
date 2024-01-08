@@ -189,7 +189,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3b3a9b3cb9c057c468832a4a459e562d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -285,10 +285,10 @@ MonoBehaviour:
   moveSpeed: 5
   score: 50
   player: {fileID: 0}
-  attackDistance: 6
+  attackDistance: 2
   timer: 2
   groundCheck: {fileID: 4970892084897906284}
-  groundCheckRadius: 1.49
+  groundCheckRadius: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
