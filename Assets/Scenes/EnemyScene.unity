@@ -706,6 +706,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5328130261135857528, guid: 50b01e4c1a1d3874c9fe22457b77aeb5, type: 3}
+      propertyPath: EnemySpawn_FX
+      value: 
+      objectReference: {fileID: 8300000, guid: fa107b1d1884ab047bbb13b3ac963df3, type: 3}
     - target: {fileID: 5328130261135857529, guid: 50b01e4c1a1d3874c9fe22457b77aeb5, type: 3}
       propertyPath: m_RootOrder
       value: 7

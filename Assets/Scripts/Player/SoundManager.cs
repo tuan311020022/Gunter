@@ -20,7 +20,8 @@ public enum SoundType{
     Heal,
 
     EnemyDead,
-    BodyHit
+    BodyHit,
+    EnemySpawn,
 }
 
 public class SoundManager : MonoBehaviour
@@ -50,6 +51,7 @@ public class SoundManager : MonoBehaviour
 
     public AudioClip SFX_EnemyDead;
     public AudioClip BodyHit_FX;
+    public AudioClip EnemySpawn_FX;
     private Dictionary<SoundType, AudioClip> dictAudio;
 
     private void Awake() {
@@ -71,6 +73,7 @@ public class SoundManager : MonoBehaviour
             {SoundType.Heal, SFX_Heal},
             {SoundType.EnemyDead, SFX_EnemyDead},
             {SoundType.BodyHit, BodyHit_FX},
+            {SoundType.EnemySpawn, EnemySpawn_FX},
         };
     }
 

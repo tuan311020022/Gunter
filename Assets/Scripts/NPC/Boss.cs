@@ -82,7 +82,7 @@ public class Boss : EnemyController
             {
                 int randomIndex = Random.Range(0, enemyPrefabs.Length);
                 nextSpawn = Time.time + spawnRate;
-            //    soundManager.PlaySFX(SoundType.BossLaser);
+                soundManager.PlaySFX(SoundType.EnemySpawn);
                 GameObject spawnEnemy1 = Instantiate(enemyPrefabs[randomIndex], enemySpawner.position, enemySpawner.rotation);
                 GameObject spawnEnemy2 = Instantiate(enemyPrefabs[randomIndex], enemySpawner.position, enemySpawner.rotation);
 
