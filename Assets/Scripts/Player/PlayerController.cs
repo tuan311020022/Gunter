@@ -65,6 +65,7 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.CompareTag("Hit"))
         {
             soundManager.PlaySFX(SoundType.Melee);
+            effectManager.PlayEffect(EffectType.Blood, transform);
             TakeDamage(10);
         }
     }

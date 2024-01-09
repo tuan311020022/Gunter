@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Boss : EnemyController
 {
@@ -27,15 +28,15 @@ public class Boss : EnemyController
     public LayerMask playerLayer;
     #endregion
 
-
+    private void Awake() {
+        effectManager = FindObjectOfType<EffectManager>();
+        soundManager = FindObjectOfType<SoundManager>();
+    }
     void Start() {
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
 
-        effectManager = FindObjectOfType<EffectManager>();
-        soundManager = FindObjectOfType<SoundManager>();
-        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();    
-
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     void Update() {
@@ -58,12 +59,12 @@ public class Boss : EnemyController
                 GameObject bossBullet1 = Instantiate(bossProjectilePrefab, bossWeapon.position, bossWeapon.rotation);
                 GameObject bossBullet2 = Instantiate(bossProjectilePrefab, bossWeapon.position, bossWeapon.rotation);
 
-                bossBullet.transform.eulerAngles = new Vector3(0, 0, 90f);
+                bossBullet.transform.eulerAngles = new Vector3(0, 0, 140f);
 
-                bossBullet1.transform.eulerAngles = new Vector3(0, 0, 120f);
+                bossBullet1.transform.eulerAngles = new Vector3(0, 0, 150f);
                 bossBullet1.transform.localScale = new Vector3(2,2);
 
-                bossBullet2.transform.eulerAngles = new Vector3(0, 0, 140f);
+                bossBullet2.transform.eulerAngles = new Vector3(0, 0, 160f);
                 bossBullet2.transform.localScale = new Vector3(3,3);
 
             }
@@ -71,6 +72,7 @@ public class Boss : EnemyController
             {
                 nextFire1 = Time.time + fireRate1;
                 anim.SetTrigger("LowAttack");
+                soundManager.PlaySFX(SoundType.BossLaser);
                 GameObject bossRetroBullet = Instantiate(bossProjectilePrefab2, bossWeapon.position, bossWeapon.rotation);
 
                 bossRetroBullet.transform.eulerAngles = new Vector3(0, 0, 180f);
@@ -80,6 +82,7 @@ public class Boss : EnemyController
             {
                 int randomIndex = Random.Range(0, enemyPrefabs.Length);
                 nextSpawn = Time.time + spawnRate;
+            //    soundManager.PlaySFX(SoundType.BossLaser);
                 GameObject spawnEnemy1 = Instantiate(enemyPrefabs[randomIndex], enemySpawner.position, enemySpawner.rotation);
                 GameObject spawnEnemy2 = Instantiate(enemyPrefabs[randomIndex], enemySpawner.position, enemySpawner.rotation);
 

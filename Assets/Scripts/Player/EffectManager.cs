@@ -6,8 +6,13 @@ public enum EffectType {
     Shoot, 
     Dead, 
     Rescue, 
-    EnemyDead,
+    Hit,
+    HitRed,
+    HitYellow,
     Break,
+    Blood,
+    BossLaser,
+    BodyHit,
 }
 
 public class EffectManager : MonoBehaviour
@@ -17,8 +22,13 @@ public class EffectManager : MonoBehaviour
     public GameObject Dead_FX;
     public GameObject Rescue_FX;
 
-    public GameObject EnemyDead_FX;
+    public GameObject Hit_FX;
+    public GameObject HitRed_FX;
+    public GameObject HitYellow_FX;
     public GameObject Break_FX;
+
+    public GameObject Blood_FX;
+    public GameObject BossLaser_FX;
 
     private Dictionary<EffectType, GameObject> dictionary;
    private void Awake() {
@@ -27,8 +37,13 @@ public class EffectManager : MonoBehaviour
             {EffectType.Shoot, Shoot_FX},
             {EffectType.Dead, Dead_FX},
             {EffectType.Rescue, Rescue_FX},
-            {EffectType.EnemyDead, EnemyDead_FX},
-            {EffectType.Break, Break_FX}
+            {EffectType.Hit, Hit_FX},
+            {EffectType.HitRed, HitRed_FX},
+
+            {EffectType.HitYellow, HitYellow_FX},
+            {EffectType.Break, Break_FX},
+            {EffectType.Blood, Blood_FX},
+            {EffectType.BossLaser, BossLaser_FX},
         };
    }
 

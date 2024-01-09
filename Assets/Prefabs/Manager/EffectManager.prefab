@@ -45,7 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Shoot_FX: {fileID: 100018, guid: dc77a05b3d614ed49bc9a802e4ee4bc5, type: 3}
-  Dead_FX: {fileID: 100018, guid: dc77a05b3d614ed49bc9a802e4ee4bc5, type: 3}
+  Dead_FX: {fileID: 5985634496115995773, guid: 463cf9f7af4680240898f6aeba3fe3e6, type: 3}
   Rescue_FX: {fileID: 100018, guid: dc77a05b3d614ed49bc9a802e4ee4bc5, type: 3}
-  EnemyDead_FX: {fileID: 100018, guid: dc77a05b3d614ed49bc9a802e4ee4bc5, type: 3}
+  Hit_FX: {fileID: 100000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
+  HitRed_FX: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
+  HitYellow_FX: {fileID: 5880797563127281583, guid: 265d3a5ba69981a4698ceabcedf368b0, type: 3}
   Break_FX: {fileID: 100018, guid: dc77a05b3d614ed49bc9a802e4ee4bc5, type: 3}
+  Blood_FX: {fileID: 100000, guid: bc98890f6028f444eaa7789bde5e2eeb, type: 3}
+  BossLaser_FX: {fileID: 5112403345868107898, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}

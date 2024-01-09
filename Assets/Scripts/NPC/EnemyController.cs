@@ -82,7 +82,6 @@ public class EnemyController : MonoBehaviour
         Destroy(gameObject, 0.9f);
         if(isDead && maxHealth == 0)
         {
-            //effectManager.PlayEffect(EffectType.EnemyDead, transform);
             soundManager.PlaySFX(SoundType.EnemyDead);
             scoreManager.AddScore(score);
         }

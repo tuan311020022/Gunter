@@ -52,6 +52,7 @@ public class RangeEnemy : EnemyController
             detectPlayer = true;
             if(Time.time > nextFire)
             {
+                soundManager.PlaySFX(SoundType.Shoot);
                 nextFire = Time.time + fireRate;
                 GameObject enemyBullet = Instantiate(bulletPrefabs, firePoint.position, Quaternion.identity);
             }

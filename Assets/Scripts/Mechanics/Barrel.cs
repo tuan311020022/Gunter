@@ -18,7 +18,7 @@ public class Barrel : MonoBehaviour
         if(other.gameObject.CompareTag("Bullet"))
         {
             soundManager.PlaySFX(SoundType.Break);
-            effectManager.PlayEffect(EffectType.Break, transform);
+            effectManager.PlayEffect(EffectType.Hit, transform);
             Destroy(other.gameObject);
             Destroy(gameObject);
             Instantiate(gameObjects[randomIndex], transform.position, Quaternion.identity);
