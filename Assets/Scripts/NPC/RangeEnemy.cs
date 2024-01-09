@@ -20,15 +20,14 @@ public class RangeEnemy : EnemyController
     private bool detectPlayer;
 
     #endregion
-
-    void Start()
-    {
+    private void Awake() {
         anim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player").transform;
         sprite = GetComponent<SpriteRenderer>();
 
-        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();    
-
+        effectManager = FindObjectOfType<EffectManager>();
+        soundManager = FindObjectOfType<SoundManager>();
+        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();           
     }
 
     void Update()

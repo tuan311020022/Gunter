@@ -32,6 +32,8 @@ public class Boss : EnemyController
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
 
+        effectManager = FindObjectOfType<EffectManager>();
+        soundManager = FindObjectOfType<SoundManager>();
         scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();    
 
     }
@@ -51,6 +53,7 @@ public class Boss : EnemyController
             {
                 nextFire = Time.time + fireRate;
                 anim.SetTrigger("HighAttack");
+                soundManager.PlaySFX(SoundType.BossLaser);
                 GameObject bossBullet = Instantiate(bossProjectilePrefab, bossWeapon.position, bossWeapon.rotation);
                 GameObject bossBullet1 = Instantiate(bossProjectilePrefab, bossWeapon.position, bossWeapon.rotation);
                 GameObject bossBullet2 = Instantiate(bossProjectilePrefab, bossWeapon.position, bossWeapon.rotation);
