@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   speed: 10
-  destroyTime: 5
+  destroyTime: 1
   move: {fileID: 0}
   bulletRender: {fileID: 0}
 --- !u!61 &-1844278231842219458
