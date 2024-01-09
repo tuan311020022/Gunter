@@ -38,7 +38,7 @@ public class MeleeEnemy : EnemyController
         
         effectManager = FindObjectOfType<EffectManager>();
         soundManager = FindObjectOfType<SoundManager>();
-        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();    
+        scoreManager = FindObjectOfType<ScoreManager>();   
     }
     void Update()
     {

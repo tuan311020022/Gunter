@@ -33,7 +33,7 @@ public class EnemyController : MonoBehaviour
 
             effectManager = FindObjectOfType<EffectManager>();
             soundManager = FindObjectOfType<SoundManager>();
-            scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();    
+            scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     void Update()
