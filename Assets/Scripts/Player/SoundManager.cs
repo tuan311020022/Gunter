@@ -78,8 +78,8 @@ public class SoundManager : MonoBehaviour
     }
 
     private void Start() {
-        //musicSource.clip = audioGameMusic;
-        //musicSource.Play();
+        // musicSource.clip = audioGameMusic;
+        // musicSource.Play();
     }
 
     public void PlayMusic(SoundType sound, bool isLoop, float delayTime = 0)

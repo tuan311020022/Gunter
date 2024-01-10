@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public int maxGrenade = 3;
 
     public Image healthBar;
+
+    public int meleeDamage;
     #endregion
     Animator animator;
     EffectManager effectManager;
@@ -66,7 +68,7 @@ public class PlayerController : MonoBehaviour
         {
             soundManager.PlaySFX(SoundType.Melee);
             effectManager.PlayEffect(EffectType.Blood, transform);
-            TakeDamage(10);
+            TakeDamage(meleeDamage);
         }
     }
 }
