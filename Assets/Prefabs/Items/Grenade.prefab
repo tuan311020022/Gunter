@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2741413345121848081}
   m_Layer: 11
   m_Name: Grenade
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 3657242293003458877}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 8e3dea780bf668b409ea9321e8a1014f, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
-  damage: 5
+  damage: 20
   ExplosionEffect: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
 --- !u!50 &2741413345121848081
 Rigidbody2D:
