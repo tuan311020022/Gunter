@@ -60,9 +60,10 @@ public class Boss : EnemyController
                 GameObject bossBullet2 = Instantiate(bossProjectilePrefab, bossWeapon.position, bossWeapon.rotation);
 
                 bossBullet.transform.eulerAngles = new Vector3(0, 0, 140f);
+                bossBullet2.transform.localScale = new Vector3(3,3);
 
                 bossBullet1.transform.eulerAngles = new Vector3(0, 0, 150f);
-                bossBullet1.transform.localScale = new Vector3(2,2);
+                bossBullet1.transform.localScale = new Vector3(3,3);
 
                 bossBullet2.transform.eulerAngles = new Vector3(0, 0, 160f);
                 bossBullet2.transform.localScale = new Vector3(3,3);
@@ -81,10 +82,11 @@ public class Boss : EnemyController
             if(Time.time > nextSpawn)
             {
                 int randomIndex = Random.Range(0, enemyPrefabs.Length);
+                int randomIndex1 = Random.Range(0, enemyPrefabs.Length);
                 nextSpawn = Time.time + spawnRate;
                 soundManager.PlaySFX(SoundType.EnemySpawn);
                 GameObject spawnEnemy1 = Instantiate(enemyPrefabs[randomIndex], enemySpawner.position, enemySpawner.rotation);
-                GameObject spawnEnemy2 = Instantiate(enemyPrefabs[randomIndex], enemySpawner.position, enemySpawner.rotation);
+                GameObject spawnEnemy2 = Instantiate(enemyPrefabs[randomIndex1], enemySpawner.position, enemySpawner.rotation);
 
             }
         }
