@@ -13,10 +13,17 @@ public class EnemyProjectile : MonoBehaviour
     private GameObject enemy;
 
     private Vector2 direction;
+    EffectManager effectManager;
+    SoundManager soundManager;
+    private void Awake() {
+        effectManager = FindObjectOfType<EffectManager>();
+        soundManager = FindObjectOfType<SoundManager>();
+    }
+    
     void Start()
     {
         enemy = GameObject.FindGameObjectWithTag("RangeEnemy");
-        
+
         Destroy(gameObject, destroyTime);
 
         SetInitialDirection();
@@ -46,6 +53,8 @@ public class EnemyProjectile : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             PlayerController player = other.gameObject.GetComponent<PlayerController>();
+            soundManager.PlaySFX(SoundType.BodyHit);
+            effectManager.PlayEffect(EffectType.HitYellow,transform);
             player.TakeDamage(damage);
             Destroy(gameObject);
         }     

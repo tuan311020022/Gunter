@@ -1,62 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class EnemyController : MonoBehaviour
 {
     #region Public
-    public int maxHealth;
-
+    public float maxHealth;
     public float moveSpeed;
+    public int score;
     public Transform player;
-
-    #endregion
-
-    #region Private
-    private float currentHealth;
 
     #endregion
 
     #region Protected
     protected bool facingRight;
 
-    protected bool detectPlayer;
-
-    protected float targetDistance;
-
-    protected SpriteRenderer sprite;
-
     protected Animator anim;
+    protected SpriteRenderer sprite;
+    protected bool isDead = false;
+    protected ScoreManager scoreManager;
+    
+    protected EffectManager effectManager;
+    protected SoundManager soundManager;
 
-    protected Rigidbody2D rb2D;
     #endregion
 
-    void Start() {
-        currentHealth = maxHealth;
+    private void Awake() {
+            anim = GetComponent<Animator>();
+            player = GameObject.FindWithTag("Player").transform;
+            sprite = GetComponent<SpriteRenderer>();
 
-        anim = GetComponent<Animator>();
-        rb2D = GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
-
-        player = GameObject.FindWithTag("Player").transform;
+            effectManager = FindObjectOfType<EffectManager>();
+            soundManager = FindObjectOfType<SoundManager>();
+            scoreManager = FindObjectOfType<ScoreManager>();
     }
+
     void Update()
     {
-        targetDistance = transform.position.x - player.position.x;
+        //targetDistance = transform.position.x - player.position.x;
     }
 
     protected void Flip()
     {
-        // Vector3 scale = transform.localScale;
-
-        // if(player.transform.position.x > transform.position.x )
-        // {
-        //     scale.x = Mathf.Abs(scale.x) * -1;
-        // }else if (player.transform.position.x < transform.position.x){
-        //     scale.x = Mathf.Abs(scale.x);
-        // }
-        
-        // transform.localScale = scale;
         facingRight = !facingRight;
 
         Vector3 scale = transform.localScale;
@@ -67,11 +53,10 @@ public class EnemyController : MonoBehaviour
         anim.SetBool("Walk", true);
     }
 
-    protected void FlipIfNeeded(float horizontalDistance) // horizontalDistance = player.position.x - transform.position.x
+    protected void FlipWhenSpottedPlayer(float horizontalDistance) // horizontalDistance = player.position.x - transform.position.x
     {
         if ((horizontalDistance > 0 && !facingRight) || (horizontalDistance < 0 && facingRight))
         {
-            // Flip the enemy
             facingRight = !facingRight;
             Vector3 scale = transform.localScale;
             scale.x *= -1;
@@ -81,23 +66,26 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        if(currentHealth <= 0)
+        maxHealth -= damage;
+        if(maxHealth <= 0)
         {
             Dead();
-        }
-        else{
+        }else {
             StartCoroutine(DamageColorCoroutine());
         }
     }
 
     void Dead()
     {
-        anim.SetTrigger("Die");
-        
+        isDead = true;
+        anim.SetBool("Dead", true);
         Destroy(gameObject, 0.9f);
+        if(isDead && maxHealth == 0)
+        {
+            soundManager.PlaySFX(SoundType.EnemyDead);
+            scoreManager.AddScore(score);
+        }
     }
-
     IEnumerator DamageColorCoroutine()
     {
         sprite.color = Color.red;

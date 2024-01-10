@@ -268,25 +268,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1034755369 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5819063096555953893, guid: 0adbaaed303f31f4db81b5eb7a5e34f3, type: 3}
-  m_PrefabInstance: {fileID: 5819063096047963152}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1034755376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034755369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 789f583a8a854b249ac4c638fd56ed30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grenade: {fileID: 3657242293003458877, guid: e4a341c240634ea4894990b12179556b, type: 3}
-  mySpriteRenderer: {fileID: 0}
 --- !u!1 &1972464930
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,8 +345,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972464930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0299, y: 0.0392, z: 0}
-  m_LocalScale: {x: 4.077101, y: 2.348295, z: 1}
+  m_LocalPosition: {x: -0.05, y: -0.14, z: 0}
+  m_LocalScale: {x: 4.1150184, y: 2.3778834, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -499,11 +480,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5819063096555953898, guid: 0adbaaed303f31f4db81b5eb7a5e34f3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.88
+      value: -7.19
       objectReference: {fileID: 0}
     - target: {fileID: 5819063096555953898, guid: 0adbaaed303f31f4db81b5eb7a5e34f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.44
+      value: 1.76
       objectReference: {fileID: 0}
     - target: {fileID: 5819063096555953898, guid: 0adbaaed303f31f4db81b5eb7a5e34f3, type: 3}
       propertyPath: m_LocalPosition.z

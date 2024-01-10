@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 5819063096555953895}
   - component: {fileID: 5819063096555953894}
   - component: {fileID: 5819063096555953899}
+  - component: {fileID: 1034755377}
+  - component: {fileID: 1034755376}
+  - component: {fileID: 1770169041}
   m_Layer: 7
   m_Name: Marco Rossi_0
   m_TagString: Player
@@ -30,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 5819063096555953893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.01, y: -0.77, z: 0}
-  m_LocalScale: {x: 2.2, y: 2.2, z: 2.2}
+  m_LocalScale: {x: 2.3, y: 2.3, z: 2.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,7 +104,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.10637134, y: 0}
+  m_Offset: {x: -0.10637134, y: 0.036287367}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -112,7 +115,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6512574, y: 1.084}
+  m_Size: {x: 0.6512574, y: 1.0114251}
   m_EdgeRadius: 0
 --- !u!50 &5819063096555953895
 Rigidbody2D:
@@ -147,10 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16e67f3b5aba6f04ca64736f98645b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diChuyen: 0
-  tocDo: 2
-  rotationSpeed: 200
-  mau: 100
   mySpriteRenderer: {fileID: 0}
 --- !u!114 &5819063096555953899
 MonoBehaviour:
@@ -166,3 +165,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 387115778646453318, guid: d5dc4c345b32382448d4a17cbdf259b2, type: 3}
   mySpriteRenderer: {fileID: 0}
+--- !u!95 &1034755377
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5819063096555953893}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3f13123e117c15848bfc07720d479919, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1034755376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5819063096555953893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 789f583a8a854b249ac4c638fd56ed30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenade: {fileID: 3657242293003458877, guid: e4a341c240634ea4894990b12179556b, type: 3}
+  mySpriteRenderer: {fileID: 0}
+--- !u!114 &1770169041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5819063096555953893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712dfe6f9b227274b9c37a2fa0f7d0b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 100
+  currentGrenade: 0
+  maxGrenade: 3
+  healthBar: {fileID: 0}
