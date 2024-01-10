@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3881527282473151127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.45, y: 1.81, z: 0}
+  m_LocalPosition: {x: 0.35, y: 2.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -129,7 +129,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.5726008, y: 0}
+  m_Offset: {x: 2.5726008, y: 1.0677807}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -140,7 +140,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5347986, y: 4.04}
+  m_Size: {x: 2.5347986, y: 6.1755614}
   m_EdgeRadius: 0
 --- !u!1 &8094572853278188239
 GameObject:
@@ -172,7 +172,7 @@ Transform:
   m_GameObject: {fileID: 8094572853278188239}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 42.49, y: -1.8, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.96, y: 1.96, z: 1.96}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3881527284150681123}
@@ -287,7 +287,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.25339186}
+  m_Offset: {x: 0, y: 0.20755273}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -298,7 +298,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8304749, y: 2.1716783}
+  m_Size: {x: 1.8304749, y: 3.0935664}
   m_EdgeRadius: 0
 --- !u!114 &3881527284418010932
 MonoBehaviour:
@@ -316,8 +316,8 @@ MonoBehaviour:
   moveSpeed: 0
   score: 1000
   player: {fileID: 0}
-  fireRate: 3
-  fireRate1: 10
+  fireRate: 5
+  fireRate1: 20
   bossProjectilePrefab: {fileID: 2029935089232164012, guid: 6f66fc10e4f7eaf43bc4e19709c65d0c, type: 3}
   bossProjectilePrefab2: {fileID: 6148371636724051210, guid: d7f239566e9b6a24bbe1bd28dc7c3b93, type: 3}
   bossWeapon: {fileID: 8094572853278188237}

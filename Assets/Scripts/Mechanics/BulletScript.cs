@@ -14,6 +14,13 @@ public class BulletScript : MonoBehaviour
 
     public SpriteRenderer bulletRender;
 
+    EffectManager effectManager;
+    SoundManager soundManager;
+
+    private void Awake() {
+        effectManager = FindObjectOfType<EffectManager>();
+        soundManager = FindObjectOfType<SoundManager>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +58,8 @@ public class BulletScript : MonoBehaviour
         {
             EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
             enemy.TakeDamage(damage);
+            soundManager.PlaySFX(SoundType.BodyHit);
+            effectManager.PlayEffect(EffectType.HitYellow, transform);
             Destroy(gameObject);
         }
         
@@ -58,6 +67,8 @@ public class BulletScript : MonoBehaviour
         {
             EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
             enemy.TakeDamage(damage);
+            soundManager.PlaySFX(SoundType.BodyHit);
+            effectManager.PlayEffect(EffectType.HitYellow, transform);
             Destroy(gameObject);
         }
     }

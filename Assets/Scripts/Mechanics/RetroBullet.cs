@@ -11,13 +11,17 @@ public class RetroBullet : MonoBehaviour
     public int damage;
 
     public float growthRate;
-
+    EffectManager effectManager;
+    SoundManager soundManager;
+    private void Awake() {
+        effectManager = FindObjectOfType<EffectManager>();
+        soundManager = FindObjectOfType<SoundManager>();
+    }
     void Start()
     {        
         Destroy(gameObject, destroyTime);
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.localScale += new Vector3(growthRate, growthRate, 0f) * speed * Time.deltaTime;
@@ -30,6 +34,8 @@ public class RetroBullet : MonoBehaviour
         {
             PlayerController player = other.gameObject.GetComponent<PlayerController>();
             player.TakeDamage(damage);
+            soundManager.PlaySFX(SoundType.Explosion);
+            effectManager.PlayEffect(EffectType.HitRed, transform);
             Destroy(gameObject);
         }     
     }

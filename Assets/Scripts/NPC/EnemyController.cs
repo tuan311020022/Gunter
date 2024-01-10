@@ -20,15 +20,20 @@ public class EnemyController : MonoBehaviour
     protected SpriteRenderer sprite;
     protected bool isDead = false;
     protected ScoreManager scoreManager;
+    
+    protected EffectManager effectManager;
+    protected SoundManager soundManager;
 
     #endregion
-    void Start() {
-        player = GameObject.FindWithTag("Player").transform;
 
-        anim = GetComponent<Animator>();
-        sprite = GetComponent<SpriteRenderer>();
-        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();    
+    private void Awake() {
+            anim = GetComponent<Animator>();
+            player = GameObject.FindWithTag("Player").transform;
+            sprite = GetComponent<SpriteRenderer>();
 
+            effectManager = FindObjectOfType<EffectManager>();
+            soundManager = FindObjectOfType<SoundManager>();
+            scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     void Update()
@@ -77,12 +82,13 @@ public class EnemyController : MonoBehaviour
         Destroy(gameObject, 0.9f);
         if(isDead && maxHealth == 0)
         {
+            soundManager.PlaySFX(SoundType.EnemyDead);
             scoreManager.AddScore(score);
         }
     }
     IEnumerator DamageColorCoroutine()
     {
-        sprite.color = Color.yellow;
+        sprite.color = Color.red;
         yield return new WaitForSeconds(0.2f);
         sprite.color = Color.white;
     }

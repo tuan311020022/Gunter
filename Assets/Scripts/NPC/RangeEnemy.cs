@@ -20,15 +20,14 @@ public class RangeEnemy : EnemyController
     private bool detectPlayer;
 
     #endregion
-
-    void Start()
-    {
+    private void Awake() {
         anim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player").transform;
         sprite = GetComponent<SpriteRenderer>();
 
-        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();    
-
+        effectManager = FindObjectOfType<EffectManager>();
+        soundManager = FindObjectOfType<SoundManager>();
+        scoreManager = FindObjectOfType<ScoreManager>(); 
     }
 
     void Update()
@@ -53,6 +52,7 @@ public class RangeEnemy : EnemyController
             detectPlayer = true;
             if(Time.time > nextFire)
             {
+                soundManager.PlaySFX(SoundType.Shoot);
                 nextFire = Time.time + fireRate;
                 GameObject enemyBullet = Instantiate(bulletPrefabs, firePoint.position, Quaternion.identity);
             }

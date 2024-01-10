@@ -13,6 +13,7 @@ TagManager:
   - FxTemporaire
   - Hostage
   - ScoreManager
+  - Sound
   layers:
   - Default
   - TransparentFX

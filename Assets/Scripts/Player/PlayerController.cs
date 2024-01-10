@@ -14,6 +14,12 @@ public class PlayerController : MonoBehaviour
     public Image healthBar;
     #endregion
     Animator animator;
+    EffectManager effectManager;
+    SoundManager soundManager;
+    private void Awake() {
+        effectManager = FindObjectOfType<EffectManager>();
+        soundManager = FindObjectOfType<SoundManager>();
+    }
     private void Start() {
         currentHealth = maxHealth;
         currentGrenade = maxGrenade;
@@ -58,6 +64,8 @@ public class PlayerController : MonoBehaviour
         Debug.Log(other.gameObject.tag);
         if(other.gameObject.CompareTag("Hit"))
         {
+            soundManager.PlaySFX(SoundType.Melee);
+            effectManager.PlayEffect(EffectType.Blood, transform);
             TakeDamage(10);
         }
     }
