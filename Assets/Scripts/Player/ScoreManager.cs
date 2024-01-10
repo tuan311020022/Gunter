@@ -13,7 +13,7 @@ public class ScoreManager : MonoBehaviour
     }
     void Update()
     {
-        scoreText.text = "Score: " + score.ToString();
+        //scoreText.text = "Score: " + score.ToString();
     }
 
     public void AddScore(int number)
