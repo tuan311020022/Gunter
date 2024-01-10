@@ -6,13 +6,22 @@ public class Barrel : MonoBehaviour
 {
     public GameObject[] gameObjects;
 
-    private void OnCollisionEnter2D(Collision2D other) {
+    EffectManager effectManager;
+    SoundManager soundManager;
+    private void Awake() {
+        effectManager = FindObjectOfType<EffectManager>();
+        soundManager = FindObjectOfType<SoundManager>();
+    }
+    private void OnTriggerEnter2D(Collider2D other) {
         int randomIndex = Random.Range(0, gameObjects.Length);
         
         if(other.gameObject.CompareTag("Bullet"))
         {
-            Instantiate(gameObjects[randomIndex], transform.position, Quaternion.identity);
+            soundManager.PlaySFX(SoundType.Break);
+            effectManager.PlayEffect(EffectType.Hit, transform);
+            Destroy(other.gameObject);
             Destroy(gameObject);
+            Instantiate(gameObjects[randomIndex], transform.position, Quaternion.identity);
         }
     }
 }

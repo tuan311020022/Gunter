@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 8960189913661412923}
   - component: {fileID: 1724973141381292256}
   - component: {fileID: 4325435250126475267}
-  - component: {fileID: -8904011723565991892}
   - component: {fileID: -5887538734720580677}
+  - component: {fileID: 1732363020}
+  - component: {fileID: -8904011723565991892}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Obstacle
@@ -108,21 +109,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-8904011723565991892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8635501758876152868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02db67f0b0d42ba4fa60c4bb06d3c112, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObjects:
-  - {fileID: 582109904466304956, guid: 92003c0d6124aec498d999a12af739fb, type: 3}
-  - {fileID: 7739101262406028116, guid: 56c94aad62a708c428784acfa1d2e5e8, type: 3}
 --- !u!61 &-5887538734720580677
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -149,3 +135,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.59, y: 0.79}
   m_EdgeRadius: 0
+--- !u!50 &1732363020
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635501758876152868}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 5
+--- !u!114 &-8904011723565991892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635501758876152868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02db67f0b0d42ba4fa60c4bb06d3c112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjects:
+  - {fileID: 582109904466304956, guid: 92003c0d6124aec498d999a12af739fb, type: 3}
+  - {fileID: 7739101262406028116, guid: 56c94aad62a708c428784acfa1d2e5e8, type: 3}

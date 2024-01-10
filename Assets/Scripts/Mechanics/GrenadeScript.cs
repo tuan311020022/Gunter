@@ -32,6 +32,14 @@ public class GrenadeScript : MonoBehaviour
 
     public GameObject ExplosionEffect;
 
+    EffectManager effectManager;
+    SoundManager soundManager;
+
+    private void Awake()
+    {
+        effectManager = FindObjectOfType<EffectManager>();
+        soundManager = FindObjectOfType<SoundManager>();
+    }
     void Start()
     {
         move = FindObjectOfType<Move>();
@@ -68,35 +76,26 @@ public class GrenadeScript : MonoBehaviour
             transform.Translate(Vector2.up * (speed + 3) * Time.deltaTime);
             transform.Translate(Vector2.left * (speed - 3) * Time.deltaTime);
         }
-        //countDown -= Time.deltaTime;
-
-        //if(countDown <= 0 && !isExplode)
-        //{
-        //    Explode();
-        //    isExplode = true;
-        //}
     }
 
-    //private void Explode()
-    //{
-    //    Instantiate(ExplosionEffect, transform.position, transform.rotation);
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
+            enemy.TakeDamage(damage);
+            soundManager.PlaySFX(SoundType.Explosion);
+            effectManager.PlayEffect(EffectType.Grenade, transform);
+            Destroy(gameObject);
+        }
 
-    //    // Collider2D[] Around = Physics2D.OverlapCircleAll(playerCheck.position, grenadeRadius, playerLayer);
-        
-    //    // foreach(Collider2D inside in Around)
-    //    // {
-    //    //     if(inside.transform.tag == "Player")
-    //    //     {
-    //    //         PlayerController ps = GetComponent<PlayerController>();
-    //    //         ps.TakeDamage(10);
-    //    //     }
-    //    // }
-
-    //    Destroy(gameObject);
-    //}
-
-    //private void OnDrawGizmosSelected() {
-    //  Gizmos.color = Color.red;
-    //  Gizmos.DrawWireSphere(playerCheck.position, grenadeRadius);
-    //}
+        if (collision.gameObject.CompareTag("RangeEnemy"))
+        {
+            EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
+            enemy.TakeDamage(damage);
+            soundManager.PlaySFX(SoundType.Explosion);
+            effectManager.PlayEffect(EffectType.Grenade, transform);
+            Destroy(gameObject);
+        }
+    }
 }

@@ -6,6 +6,8 @@ public class Hostage : MonoBehaviour
 {
     [SerializeField] float destroyTime;
     [SerializeField] ParticleSystem myParticle;
+    public int score;
+    public int hpRestore;
     private float speed = 4;
 
     bool isRelease;
@@ -13,9 +15,17 @@ public class Hostage : MonoBehaviour
 
     BoxCollider2D boxCollider;
 
+    ScoreManager scoreManager;
+    EffectManager effectManager;
+
+    SoundManager soundManager;
     private void Start() {
         animator = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+
+        effectManager = FindObjectOfType<EffectManager>();
+        soundManager = FindObjectOfType<SoundManager>();
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     private void Update() {
@@ -33,21 +43,20 @@ public class Hostage : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
+        PlayerController player = other.gameObject.GetComponent<PlayerController>();
         if(other.gameObject.CompareTag("Player"))
         {
             animator.SetTrigger("Release");
             boxCollider.enabled = false;
             isRelease = true;
-            PlayParticle();
+            effectManager.PlayEffect(EffectType.Rescue, transform);
+            soundManager.PlaySFX(SoundType.Rescue);
+            scoreManager.AddScore(score);
+            player.GetHealth(hpRestore);
         }
         else{
             isRelease = false;
         }
-    }
-
-    private void PlayParticle()
-    {
-        Instantiate(myParticle, transform.position, Quaternion.identity);
     }
 
 }

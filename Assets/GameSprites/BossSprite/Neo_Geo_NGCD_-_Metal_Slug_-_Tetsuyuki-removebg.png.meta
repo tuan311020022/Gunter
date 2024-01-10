@@ -1,0 +1,2027 @@
+fileFormatVersion: 2
+guid: dad22da6faa20a943be6cefda9938392
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2478
+        width: 54
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b6c9bf3591cdc419ef4fdba4241e75
+      internalID: 2025702942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2394
+        width: 53
+        height: 67
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58d64b6b8173fc4b8c71fa2f0b73155
+      internalID: -1759279041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 2396
+        width: 158
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33081fdbbf258504882bf58ff390e8f4
+      internalID: -799998245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_3
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 2402
+        width: 158
+        height: 59
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f603b2f1ab09e40b79c9ac89d84b51
+      internalID: -1322088517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_4
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 2408
+        width: 211
+        height: 54
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06cf68b94f0bc5c47bfedac595739bb4
+      internalID: -2121309490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_5
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 2416
+        width: 370
+        height: 60
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc9102d297696f418c4750e4a297b34
+      internalID: -423684471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_6
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 2430
+        width: 53
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef6d4da37cad3604da7eec6b64fb714a
+      internalID: 656493254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_7
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2381
+        width: 54
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b9fce15d4e3c14ab9667f216ea185d
+      internalID: 2055665134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2222
+        width: 89
+        height: 158
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ab68fb104e1ba4ebde6fcb8043f792
+      internalID: 453165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_9
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 2304
+        width: 59
+        height: 76
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636cfa1c09d6abe4eb8b12811c8fc49d
+      internalID: -1426227703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_10
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2305
+        width: 52
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca8d264b2768de4286a0b6f93f99290
+      internalID: 1884898724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_11
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 2308
+        width: 53
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe556b4d35239664ca295a0ccb3b5652
+      internalID: 1512541008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_12
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 2310
+        width: 54
+        height: 71
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a3c4138bc5eda47ac295a4f3573a25
+      internalID: -273199806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_13
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 2311
+        width: 53
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944014e418b94774aacce158f2c63ed3
+      internalID: 825488665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_14
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 2222
+        width: 53
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc23e06237c0664bb81b8965dee0e88
+      internalID: 725520141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_15
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 2222
+        width: 52
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a061bbf8f72313949bc75aa33f838cde
+      internalID: 1332981395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_16
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 2222
+        width: 54
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae0efb06796f807478303e5d6d4899c6
+      internalID: 349492136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_17
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 2222
+        width: 55
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba29aac4011eb74cb9bd09d7a95848f
+      internalID: 1190321062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_18
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 2220
+        width: 58
+        height: 68
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5cc44f33546b084f95a36a9e8a77302
+      internalID: -947296297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_19
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 2220
+        width: 60
+        height: 68
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa31d09f0fb1ac248b88e5bfea968a8d
+      internalID: 1268057028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_20
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2220
+        width: 59
+        height: 68
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf26e48830f67646b1815936c149a92
+      internalID: 598595185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_21
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 2220
+        width: 57
+        height: 68
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0577cba27c884342963aa9b88cfde0b
+      internalID: -2063728095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_22
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2138
+        width: 116
+        height: 82
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f89f0dd97e7394b8413c4a023c4280
+      internalID: 1854374298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_23
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 2151
+        width: 58
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13799fab4adc3f44aaed42363f8d0957
+      internalID: -2124864880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_24
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 2151
+        width: 57
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acee00d99752a6b49887008cf395e930
+      internalID: 1002481473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_25
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 2151
+        width: 57
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab1791175b670349bdc082d1278f32c
+      internalID: -510484993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_26
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 2151
+        width: 59
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b7d574575a96e49ad8512da57f3833
+      internalID: -1550679063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_27
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 2151
+        width: 57
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d137f0a879a874c4795d0ac1ac18cd8b
+      internalID: -99204537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_28
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 2151
+        width: 58
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed5012a0d7abdc4893c62d22beba3c3
+      internalID: -724792326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_29
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2071
+        width: 53
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5621b5fedb3a54f46b0ab8db23d19f83
+      internalID: 380670752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_30
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 2009
+        width: 177
+        height: 118
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c050b4bf73a754196b0ae3a8aa3fa6
+      internalID: 702940974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_31
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 2073
+        width: 113
+        height: 63
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd66c1cdde16622429714f8a8decf5ec
+      internalID: -2091933434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_32
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 2074
+        width: 60
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b075761c12060c34bb3fd36d1ffcc023
+      internalID: -469114760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_33
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2074
+        width: 59
+        height: 62
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d67d057a6c8eb1548b70b4e55c119304
+      internalID: 198423098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_34
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 2074
+        width: 57
+        height: 62
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf1649c4dabc264894650799feb66e6
+      internalID: -1269385281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_35
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1996
+        width: 59
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ade15cb6c00bce4186ed425ed5946a8
+      internalID: -2051017918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_36
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 2009
+        width: 57
+        height: 63
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd0e3adffd9744941b9583fbcf463bb9
+      internalID: 425141569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_37
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 2009
+        width: 59
+        height: 62
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f576c01f5b14134688d420410bbddcd
+      internalID: -441375337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_38
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 2009
+        width: 57
+        height: 62
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cae597a8edf79945ba966ffa5017c50
+      internalID: 419895273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_39
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 2009
+        width: 58
+        height: 62
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a65fb11efbef2074abcea886f90f2387
+      internalID: -1798903496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_40
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1952
+        width: 119
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1847b4e63d7b127419210a14919893b1
+      internalID: 318908274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_41
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 1947
+        width: 121
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747165e59336a824bbf9d93e1980f942
+      internalID: 793062940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_42
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1759
+        width: 497
+        height: 189
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0fef18480bbfc646aeeebe1d38fa980
+      internalID: -2125813911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_43
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1760
+        width: 52
+        height: 68
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7f4448c45687a499d71b9bd8c2cb85
+      internalID: -731635621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_44
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 1760
+        width: 56
+        height: 68
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1850805d81955de4fab76b2d844df404
+      internalID: -905708690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_45
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1762
+        width: 59
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bdff1d6ca4a4df4e8ca59a5730da3d3
+      internalID: -32790266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_46
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1745
+        width: 30
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ac2a05e148831498d4ff757d5acece
+      internalID: -526129491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_47
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1699
+        width: 132
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a260bd5617da54fb0a0eda43e693dd
+      internalID: -102477978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_48
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1607
+        width: 299
+        height: 92
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c4dfbe4db3ba7419e0e6a2b4e8650a
+      internalID: -1875996652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_49
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1544
+        width: 30
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b15eb75493d734abf8b59a9b25f978
+      internalID: 1922332595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_50
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1557
+        width: 663
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbd7109b9ca3724e852cdc64da582b7
+      internalID: -1032022166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_51
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1497
+        width: 131
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a220b0a6e3f935747a20e774b460a5f0
+      internalID: -837864060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_52
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1436
+        width: 360
+        height: 61
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1a01c7c5fea3546b148fecce6fed12
+      internalID: -436581123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_53
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1437
+        width: 412
+        height: 59
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acf593bf94dc9f418d21ceed6063e44
+      internalID: -763949982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_54
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1331
+        width: 133
+        height: 105
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2713d1e8752c14db2784d95e4cfb57
+      internalID: -268439437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_55
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1075
+        width: 400
+        height: 253
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326d16357c86d894e952d75804dd1931
+      internalID: 689743046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_56
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 954
+        width: 82
+        height: 121
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e00b0d837f63345a14d5f7fb21107d
+      internalID: 752503464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_57
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 968
+        width: 85
+        height: 107
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2efe2d6b4a4d44bb339a69163dd7de
+      internalID: 303228129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_58
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 975
+        width: 88
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9286bbfcc0d39b4aa3d7a2b663304e7
+      internalID: -1772485148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_59
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 982
+        width: 94
+        height: 93
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aaf30d7a82f42a4ca8e9042f3787049
+      internalID: 1629067923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_60
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 985
+        width: 198
+        height: 90
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6806733c66a1046a482b63e3fcb236
+      internalID: -932278889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_61
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 991
+        width: 99
+        height: 84
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8896973feef4e4db22054f6a682055
+      internalID: 1584401226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_62
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 1000
+        width: 298
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94061f6fce948934481bb79148e04741
+      internalID: 45836297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_63
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 1008
+        width: 108
+        height: 67
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3982b329505bba47969b809382dd316
+      internalID: -2079434254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_64
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 1016
+        width: 121
+        height: 59
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2ecb6c5dd9f194d9d9594cc0943505
+      internalID: -58920213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_65
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 1004
+        width: 104
+        height: 71
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974f1123e7142fc41a010f92aba91d15
+      internalID: -807481444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_66
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 1012
+        width: 106
+        height: 63
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b505699a1988fb44acc5035bf4a111e
+      internalID: 2138226463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_67
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 1007
+        width: 122
+        height: 68
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cface7209ea07f64e94e3489cd0cfa89
+      internalID: 506484399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_68
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 662
+        width: 457
+        height: 293
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de723d79e3eef14fbe8999d634d873e
+      internalID: -58754991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_69
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 917
+        width: 15
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e964f61ef9b0b4439792e2b44900695
+      internalID: -1302745863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_70
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 954
+        width: 77
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4db1922f44b6e49a1e169b462e60ca
+      internalID: -654169541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_71
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 656
+        width: 388
+        height: 299
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120770ed076bc354c90bcafc01699161
+      internalID: -580875535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_72
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 877
+        width: 37
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7dcaa3c1ef762544b7c5c2e8eedf026
+      internalID: 1798744907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_73
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 835
+        width: 34
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990d28155f79316428cf643236409c75
+      internalID: -1361550679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_74
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 833
+        width: 35
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 043e75c7d56fddf458313ab06402049d
+      internalID: -278335734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_75
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 833
+        width: 95
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18968168b0696b4dac6ac0366fe177c
+      internalID: -404615816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_76
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 394
+        width: 552
+        height: 263
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523d813186a87484bb6258fb1f3e2688
+      internalID: -11444729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_77
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 101
+        width: 388
+        height: 294
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f683bb01890bc448c5ac4d4c3b167d
+      internalID: -2131924706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_78
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 101
+        width: 390
+        height: 294
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f81a66bcd5e9aa4d9a9afbddf607516
+      internalID: 498034832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_79
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 101
+        width: 389
+        height: 294
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b16475291fecf419694ff9f0b202cb
+      internalID: 670187776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_80
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 101
+        width: 332
+        height: 294
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b21a65444b96244bb56be427d35acac
+      internalID: 2132389067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_81
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 6
+        width: 259
+        height: 389
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa4e6f6419f24f43bf83e0c826da917
+      internalID: 276670097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_82
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 182
+        width: 47
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5d8bee523518494d8f532297f3fd862
+      internalID: -1848128361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_83
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 63
+        width: 22
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab8bda29273c0e4da5376a41069d068
+      internalID: 208181221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_84
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 32
+        width: 42
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4e5440e1bc7b9499c0335a09dff538
+      internalID: -2121868848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_85
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 25
+        width: 38
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a98b91a5c10e240b16cb208a2c892c
+      internalID: 1796429331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_0: 2025702942
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_1: -1759279041
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_10: 1884898724
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_11: 1512541008
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_12: -273199806
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_13: 825488665
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_14: 725520141
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_15: 1332981395
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_16: 349492136
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_17: 1190321062
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_18: -947296297
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_19: 1268057028
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_2: -799998245
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_20: 598595185
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_21: -2063728095
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_22: 1854374298
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_23: -2124864880
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_24: 1002481473
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_25: -510484993
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_26: -1550679063
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_27: -99204537
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_28: -724792326
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_29: 380670752
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_3: -1322088517
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_30: 702940974
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_31: -2091933434
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_32: -469114760
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_33: 198423098
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_34: -1269385281
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_35: -2051017918
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_36: 425141569
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_37: -441375337
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_38: 419895273
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_39: -1798903496
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_4: -2121309490
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_40: 318908274
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_41: 793062940
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_42: -2125813911
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_43: -731635621
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_44: -905708690
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_45: -32790266
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_46: -526129491
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_47: -102477978
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_48: -1875996652
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_49: 1922332595
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_5: -423684471
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_50: -1032022166
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_51: -837864060
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_52: -436581123
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_53: -763949982
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_54: -268439437
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_55: 689743046
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_56: 752503464
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_57: 303228129
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_58: -1772485148
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_59: 1629067923
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_6: 656493254
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_60: -932278889
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_61: 1584401226
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_62: 45836297
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_63: -2079434254
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_64: -58920213
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_65: -807481444
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_66: 2138226463
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_67: 506484399
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_68: -58754991
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_69: -1302745863
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_7: 2055665134
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_70: -654169541
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_71: -580875535
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_72: 1798744907
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_73: -1361550679
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_74: -278335734
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_75: -404615816
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_76: -11444729
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_77: -2131924706
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_78: 498034832
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_79: 670187776
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_8: 453165
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_80: 2132389067
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_81: 276670097
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_82: -1848128361
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_83: 208181221
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_84: -2121868848
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_85: 1796429331
+      Neo_Geo_NGCD_-_Metal_Slug_-_Tetsuyuki-removebg_9: -1426227703
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

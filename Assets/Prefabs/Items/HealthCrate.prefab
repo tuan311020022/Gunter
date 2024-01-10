@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8412791623093559901}
   - component: {fileID: 3453629313730114926}
   - component: {fileID: 8610671466433303476}
-  - component: {fileID: 8066479543997040988}
   - component: {fileID: -3477288585501909023}
+  - component: {fileID: 8066479543997040988}
   m_Layer: 0
   m_Name: HealthCrate
   m_TagString: Untagged
@@ -113,19 +113,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.97, y: 0.89}
   m_EdgeRadius: 0
---- !u!114 &8066479543997040988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582109904466304956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b442852b88d672440ab27ef94d2c05ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 30
 --- !u!50 &-3477288585501909023
 Rigidbody2D:
   serializedVersion: 4
@@ -147,3 +134,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &8066479543997040988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582109904466304956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b442852b88d672440ab27ef94d2c05ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
