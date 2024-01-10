@@ -84,8 +84,8 @@ public class GrenadeScript : MonoBehaviour
         {
             EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
             enemy.TakeDamage(damage);
-            soundManager.PlaySFX(SoundType.BodyHit);
-            effectManager.PlayEffect(EffectType.HitYellow, transform);
+            soundManager.PlaySFX(SoundType.Explosion);
+            effectManager.PlayEffect(EffectType.Grenade, transform);
             Destroy(gameObject);
         }
 
@@ -93,8 +93,8 @@ public class GrenadeScript : MonoBehaviour
         {
             EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
             enemy.TakeDamage(damage);
-            soundManager.PlaySFX(SoundType.BodyHit);
-            effectManager.PlayEffect(EffectType.HitYellow, transform);
+            soundManager.PlaySFX(SoundType.Explosion);
+            effectManager.PlayEffect(EffectType.Grenade, transform);
             Destroy(gameObject);
         }
     }

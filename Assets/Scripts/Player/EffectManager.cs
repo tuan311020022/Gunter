@@ -13,6 +13,7 @@ public enum EffectType {
     Blood,
     BossLaser,
     BodyHit,
+    Grenade,
 }
 
 public class EffectManager : MonoBehaviour
@@ -29,6 +30,7 @@ public class EffectManager : MonoBehaviour
 
     public GameObject Blood_FX;
     public GameObject BossLaser_FX;
+    public GameObject Grenade_FX;
 
     private Dictionary<EffectType, GameObject> dictionary;
    private void Awake() {
@@ -44,6 +46,7 @@ public class EffectManager : MonoBehaviour
             {EffectType.Break, Break_FX},
             {EffectType.Blood, Blood_FX},
             {EffectType.BossLaser, BossLaser_FX},
+            {EffectType.Grenade, Grenade_FX},
         };
    }
 

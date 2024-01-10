@@ -161,10 +161,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 712dfe6f9b227274b9c37a2fa0f7d0b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
-  maxHealth: 10000
+  currentHealth: 100
+  maxHealth: 100
   currentGrenade: 0
-  grenadeNumber: 3
+  maxGrenade: 3
+  healthBar: {fileID: 0}
+  meleeDamage: 10
 --- !u!114 &7023144382318815358
 MonoBehaviour:
   m_ObjectHideFlags: 0
