@@ -857,6 +857,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1005986815}
+    - target: {fileID: 1770169041, guid: 0adbaaed303f31f4db81b5eb7a5e34f3, type: 3}
+      propertyPath: meleeDamage
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5819063096555953893, guid: 0adbaaed303f31f4db81b5eb7a5e34f3, type: 3}
       propertyPath: m_Name
       value: Marco Rossi_0
