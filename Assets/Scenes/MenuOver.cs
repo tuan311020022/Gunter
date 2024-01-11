@@ -11,10 +11,10 @@ public class MenuOver : MonoBehaviour
     }
    
     public void ChoiLai(){
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(4);
     }
     public void VeManHinhChinh(){
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
     }
     public void Thoat(){
         Application.Quit();

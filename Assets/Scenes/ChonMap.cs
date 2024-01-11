@@ -7,10 +7,10 @@ public class ChonMap : MonoBehaviour
     // Start is called before the first frame update
     public string tenMan;
     public void LoadMan1(){
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(4);
     }
     public void LoadMan2(){
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(5);
     }
 
     // Update is called once per frame
