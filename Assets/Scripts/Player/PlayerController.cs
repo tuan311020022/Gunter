@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     #region Public Variables
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour
         if(currentHealth <= 0)
         {
            //animator.SetTrigger("Die");
+           SceneManager.LoadScene(0);
             Destroy(gameObject);
         }
     }

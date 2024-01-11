@@ -11,7 +11,9 @@ public class ChuyenManChoi : MonoBehaviour
         SceneManager.LoadScene(tenMan);
     }
     private void OnTriggerEnter2D(Collider2D collision){
-        if(collision.CompareTag("Player")){
+        if(collision.CompareTag("Player"))
+        {
+            Debug.Log("hello");
             LoadMan();
         }
     }
