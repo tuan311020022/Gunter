@@ -78,8 +78,8 @@ public class SoundManager : MonoBehaviour
     }
 
     private void Start() {
-        // musicSource.clip = audioGameMusic;
-        // musicSource.Play();
+        PlaySFX(SoundType.MissionStart);
+        PlayMusic(SoundType.GameMusic, true, 0);
     }
 
     public void PlayMusic(SoundType sound, bool isLoop, float delayTime = 0)

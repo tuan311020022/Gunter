@@ -320,3 +320,4 @@ MonoBehaviour:
   SFX_Heal: {fileID: 8300000, guid: c48a972d3d024c2408a3331750786a29, type: 3}
   SFX_EnemyDead: {fileID: 8300000, guid: c312a4de2516eb04f8d94e76175fe8b5, type: 3}
   BodyHit_FX: {fileID: 8300000, guid: 620a42c468d3c5b4ea6f040968b188cc, type: 3}
+  EnemySpawn_FX: {fileID: 8300000, guid: fa107b1d1884ab047bbb13b3ac963df3, type: 3}

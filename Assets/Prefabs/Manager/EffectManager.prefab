@@ -53,3 +53,4 @@ MonoBehaviour:
   Break_FX: {fileID: 100018, guid: dc77a05b3d614ed49bc9a802e4ee4bc5, type: 3}
   Blood_FX: {fileID: 100000, guid: bc98890f6028f444eaa7789bde5e2eeb, type: 3}
   BossLaser_FX: {fileID: 5112403345868107898, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
+  Grenade_FX: {fileID: 2433282508537954060, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312, type: 3}
