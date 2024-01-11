@@ -12,25 +12,7 @@ public class GrenadeScript : MonoBehaviour
 
     public SpriteRenderer grenadeRender;
 
-    private float throwForce = 5f;
-
-    public float Delay;
-
-    public Transform playerCheck;
-    public float grenadeRadius;
-    public LayerMask playerLayer;
-
     public int damage;
-
-    private float countDown;
-    private bool isExplode;
-
-
-    private Animator anim;
-
-    private Rigidbody2D rb2D;
-
-    public GameObject ExplosionEffect;
 
     EffectManager effectManager;
     SoundManager soundManager;
@@ -55,12 +37,6 @@ public class GrenadeScript : MonoBehaviour
             // Flip vien dan
             grenadeRender.flipX = true;
         }
-        //countDown = Delay;
-        //anim = GetComponent<Animator>();  
-        //rb2D = GetComponent<Rigidbody2D>();
-        //rb2D.AddForce(Vector3.right * throwForce, ForceMode2D.Force);
-
-
     }
 
     void Update()
