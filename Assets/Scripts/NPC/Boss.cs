@@ -60,7 +60,7 @@ public class Boss : EnemyController
                 GameObject bossBullet2 = Instantiate(bossProjectilePrefab, bossWeapon.position, bossWeapon.rotation);
 
                 bossBullet.transform.eulerAngles = new Vector3(0, 0, 140f);
-                bossBullet2.transform.localScale = new Vector3(3,3);
+                bossBullet.transform.localScale = new Vector3(3,3);
 
                 bossBullet1.transform.eulerAngles = new Vector3(0, 0, 150f);
                 bossBullet1.transform.localScale = new Vector3(3,3);
