@@ -404,6 +404,7 @@ GameObject:
   - component: {fileID: 149220243}
   - component: {fileID: 149220242}
   - component: {fileID: 149220245}
+  - component: {fileID: 149220246}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -473,6 +474,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0770d124d52b8483bbb919afa7411444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &149220246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149220241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0332d823974ae4df692a1056d9f99eb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
 --- !u!1 &999220853
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,7 +749,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1231462039}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 149220246}
+        m_TargetAssemblyTypeName: TangGiamAmLuong, Assembly-CSharp
+        m_MethodName: DecreaseVolume
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1231462039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,7 +961,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1424971778}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 149220246}
+        m_TargetAssemblyTypeName: TangGiamAmLuong, Assembly-CSharp
+        m_MethodName: IncreaseVolume
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1424971778
 MonoBehaviour:
   m_ObjectHideFlags: 0
