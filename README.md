@@ -1,9 +1,11 @@
 # README - Nhóm 37: Game Gunter 2D
 ## Giới Thiệu
+- Game 2D bắn súng
+- Unity 2021.3.32f1
 
 **Tên Dự Án:** Gunter
 
-**Nhóm 09 Thành Viên:**
+**Nhóm 37 Thành Viên:**
 - Nguyễn Minh Tuấn(nhóm trưởng)
 - Nguyễn Mạnh Tuấn
 - Phạm Quốc Tuấn
@@ -13,10 +15,13 @@
 
 ### 1. Mục Tiêu
 
-**Game đặt bom** là một trò chơi nhân vật đặt bom, nơi người chơi sẽ chiến đấu với nhau trong một môi trường đa người chơi. Mục tiêu chính là sống sót và loại bỏ đối thủ bằng cách sử dụng bom và các chiến thuật khác.
+- Người lính dũng cảm chiến đấu với quân địch để giải cứu đồng đội bị bắt làm con tin
 
 ### 2. Đặc Điểm
-
+- **Player**: Người lính
+- **Barrel**: Thùng rượu, sau khi người lính bắn nổ thì rơi ra item
+- **Enemy**: Đội quân địch sử dụng dao vào đại bác
+- **Boss**: Trùm cuối, sau khi giết được sẽ chiến thắng
 
 ### 3. Hướng Dẫn Cơ Bản
 
@@ -26,6 +31,6 @@
   - Arrow Down: đi xuống
   - Arrow Up: đi lên
   
-2. **Tấn công:** Sử dụng phím Space để đặt bom tại vị trí hiện tại của nhân vật 1 hoặc l cho nhân vật 2.
+2. **Tấn công:** Sử dụng phím J hoặc K để tấn công.
   - J: bắn súng
   - K: ném lựu đạn
