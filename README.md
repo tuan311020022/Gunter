@@ -20,7 +20,11 @@
 ### 2. Đặc Điểm
 - **Player**: Người lính
 - **Barrel**: Thùng rượu, sau khi người lính bắn nổ thì rơi ra item
-- **Enemy**: Đội quân địch sử dụng dao vào đại bác
+- **HealthCrate** Item hồi máu sau khi nhặt được
+- **GrenadeCrate** Item lựu đạn, sau khi nhặt được tăng số lượng lựu đạn
+- **MeleeEnemy**: Đội quân địch sử dụng dao
+- **RangeEnemy**: Đội quân sử dụng đại bác
+- **Hostage** Con tin, sau khi chạm vào con tin sẽ được giải thoát
 - **Boss**: Trùm cuối, sau khi giết được sẽ chiến thắng
 
 ### 3. Hướng Dẫn Cơ Bản
