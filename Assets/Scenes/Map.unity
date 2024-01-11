@@ -334,6 +334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Marco Rossi_0
       objectReference: {fileID: 0}
+    - target: {fileID: 5819063096555953897, guid: 0adbaaed303f31f4db81b5eb7a5e34f3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 5819063096555953898, guid: 0adbaaed303f31f4db81b5eb7a5e34f3, type: 3}
       propertyPath: m_RootOrder
       value: 11
