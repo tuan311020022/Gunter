@@ -5,10 +5,10 @@ public class MenuOver : MonoBehaviour
     // Start is called before the first frame update
    
     public void ChoiLai(){
-        SceneManager.LoadScene(SceneManagement.GetActiveScene().name);
+        SceneManager.LoadScene(4);
     }
     public void VeManHinhChinh(){
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
     }
     public void Thoat(){
         Application.Quit();

@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
         if(currentHealth <= 0)
         {
            //animator.SetTrigger("Die");
-           SceneManager.LoadScene(0);
+           SceneManager.LoadScene(6);
             Destroy(gameObject);
         }
     }

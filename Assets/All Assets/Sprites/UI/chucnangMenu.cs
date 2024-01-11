@@ -8,7 +8,7 @@ public class chucnangMenu : MonoBehaviour
     // Bat dau choi game
     public void Play()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
     }
 
     // Thoat game 
