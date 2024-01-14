@@ -12,6 +12,9 @@ public class ChonMap : MonoBehaviour
     public void LoadMan2(){
         SceneManager.LoadScene(5);
     }
+    public void LoadManExtra(){
+        SceneManager.LoadScene(8);
+    }
 
     // Update is called once per frame
 }

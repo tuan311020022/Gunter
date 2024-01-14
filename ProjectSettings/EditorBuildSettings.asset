@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameWin.unity
     guid: 6e092b4c2c2316146b8cd86f239ad1cd
+  - enabled: 1
+    path: Assets/Scenes/ExtraMap.unity
+    guid: 43d1740210d01354ba5d5e2821209b79
   m_configObjects: {}
